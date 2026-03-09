@@ -59,15 +59,35 @@ const projects = {
     tag: '',
     title: 'Mobil 3D Tahsilat entegrasyonu',
     stack: ['Java', 'IBM D2B', 'Waterfall', 'Hayat Sigortası', 'UAT'],
-    sections: [
-      { type: 'text', content: `Mevcut hayat sigortası sistemlerinin yeni ürün yapılarına uyarlanması sürecinde aktif rol üstlendim.
-         Ürün parametrelerinin yeni şemaya taşınması, veri doğrulama adımlarının oluşturulması ve regresyon testlerinin koordinasyonunu yürüttüm.` },
-        { type: 'svg', content: 'diagrams/tahsilat-akis-en.svg' },
-         {type:'text', content: 'Bu süreçte teknik gereksinim analizi yaparak geçiş planlaması ve UAT süreçlerinde koordinatör rolü üstlendim.'},
-       
-      { type: 'bottomText', content: 'Waterfall metodolojisi kapsamında teknik gereksinim analizi, geçiş planlaması ve UAT süreçlerinde koordinatör rolü üstlenildi.' },
-      { type: 'image', content: 'images/az-gecis.png' }
-    ]
+sections: [
+  { 
+    type: 'text', 
+    content: `Hayat sigortası sisteminde vadesi geçmiş poliçe ödemelerinin mobil kanal üzerinden anlık olarak yapılabilmesini sağlayan bir ödeme akışı tasarlanıp hayata geçirildi.
+    
+Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.` 
+  },
+  { 
+    type: 'svg', 
+    content: 'diagrams/tahsilat-akis-en.svg' 
+  },
+  { 
+    type: 'text', 
+    content: `Akış klasik bir ödeme sistemine benzerlik göstermekle birlikte sigorta iş kurallarını da kapsamaktadır.
+
+Borç sorgulama, tutar doğrulama, kart kontrolü ve ödeme gateway entegrasyonunun ardından arka planda poliçe/zeyil işlemleri tetiklenir.
+
+Başarılı senaryoda kullanıcı onay ekranına yönlendirilirken tahsilat sonrası kontroller alarm mekanizmalarıyla desteklenmektedir.` 
+  },
+  { 
+    type: 'bottomText', 
+    content: `Çalışmanın en zorlu boyutu, çok sayıda ekibin ortak paydası olan bir ürünün koordinasyonuydu.
+
+Ekip sorumluluklarının netleştirilmesi ve paydaş yönetiminin yanı sıra, know-how eksikliği olan noktalarda tersine mühendislik yaklaşımıyla sistem davranışları analiz edildi.
+
+Büyük ölçekli projelerde erken aşamada yapılan strateji analizi ve bulguların kayıt altına alınmasının, ilerleyen süreçteki anlaşmazlıkların çözümünü önemli ölçüde kolaylaştırdığı bu projede bir kez daha görüldü.` 
+  }
+]
+
 
   },
   'ts-aml': {
