@@ -56,14 +56,14 @@ const slidesMeta = [
 // ── PROJE DETAYLARI (modal içeriği) ─────────────────────────
 const projects = {
   'az-1': {
-    tag: '',
+    tag: 'Proje',
     title: 'Mobil 3D Tahsilat entegrasyonu',
     stack: ['Java', 'IBM D2B', 'Waterfall', 'Hayat Sigortası', 'UAT'],
 sections: [
   { 
     type: 'text', 
-    content: `Hayat sigortası sisteminde vadesi geçmiş poliçe ödemelerinin mobil kanal üzerinden anlık olarak yapılabilmesini sağlayan bir ödeme akışı tasarlanıp hayata geçirildi.
-    
+    content: `Hayat sigortası sisteminde vadesi geçmiş poliçe ödemelerini mobil kanal üzerinden anlık olarak yapılabilir hale getiren ödeme akışını tasarladım ve süreci uçtan uca yönettim.
+
 Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.` 
   },
   { 
@@ -72,19 +72,57 @@ Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.`
   },
   { 
     type: 'text', 
-    content: `Akış klasik bir ödeme sistemine benzerlik göstermekle birlikte sigorta iş kurallarını da kapsamaktadır.
-
-Borç sorgulama, tutar doğrulama, kart kontrolü ve ödeme gateway entegrasyonunun ardından arka planda poliçe/zeyil işlemleri tetiklenir.
-
-Başarılı senaryoda kullanıcı onay ekranına yönlendirilirken tahsilat sonrası kontroller alarm mekanizmalarıyla desteklenmektedir.` 
+    content: `Akış klasik bir ödeme sistemine benzerlik göstermekle birlikte sigorta iş kurallarını da kapsamaktadır. Borç sorgulama ve tutar doğrulamadan kart kontrolü ile ödeme gateway entegrasyonuna kadar her adımı analiz ederek gereksinimleri tanımladım.` 
+  },
+  {
+    type: 'text',
+    content: `<div style="margin: 24px 0;">
+      <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Temel Katkılarım</h4>
+      <ul style="list-style: none; margin: 0; padding: 0;">
+        <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+          Vade tespiti, kur yönetimi ve mükerrer tahsilat konularında hata toleransının sıfır olduğu iş kurallarını modelledim
+        </li>
+        <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+          Karma test senaryoları için test verilerini script ile üreterek çoklu senaryoların tek seferde koşulabilmesini sağladım
+        </li>
+        <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+          Arka planda tetiklenen poliçe/zeyil işlemleri ve tahsilat sonrası alarm mekanizmalarını iş kuralları bazında tanımladım
+        </li>
+      </ul>
+    </div>`
   },
   { 
     type: 'bottomText', 
-    content: `Çalışmanın en zorlu boyutu, çok sayıda ekibin ortak paydası olan bir ürünün koordinasyonuydu.
+    content: `<div style="margin-bottom: 24px;">
+      <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Zorluklar</h4>
+      <ul style="list-style: none; margin: 0; padding: 0;">
+        <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
+          Çok sayıda ekibin ortak paydası olan bir ürünün koordinasyonu ve sorumluluk sınırlarının netleştirilmesi
+        </li>
+        <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
+          Know-how eksikliği olan noktalarda tersine mühendislik yaparak sistemin davranışlarını analiz etmek
+        </li>
+      </ul>
+    </div>
 
-Ekip sorumluluklarının netleştirilmesi ve paydaş yönetiminin yanı sıra, know-how eksikliği olan noktalarda tersine mühendislik yaklaşımıyla sistem davranışları analiz edildi.
-
-Büyük ölçekli projelerde erken aşamada yapılan strateji analizi ve bulguların kayıt altına alınmasının, ilerleyen süreçteki anlaşmazlıkların çözümünü önemli ölçüde kolaylaştırdığı bu projede bir kez daha görüldü.` 
+    <div>
+      <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Çıkarılan Dersler</h4>
+      <ul style="list-style: none; margin: 0; padding: 0;">
+        <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+          Büyük ölçekli projelerde erken aşamada yapılan strateji analizi ve bulguların kayıt altına alınması, ilerleyen süreçteki anlaşmazlıkların çözümünü doğrudan kolaylaştırır
+        </li>
+        <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+          Çözüm odaklı ekip yapısı kritik olmakla birlikte, her paydaşın kendi önceliklerini göz önünde bulunduran bir yönetim yaklaşımı şarttır
+        </li>
+      </ul>
+    </div>` 
   }
 ]
 
