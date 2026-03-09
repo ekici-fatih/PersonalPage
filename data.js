@@ -94,36 +94,44 @@ Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.`
       </ul>
     </div>`
   },
-  { 
-    type: 'bottomText', 
-    content: `<div style="margin-bottom: 24px;">
-      <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Zorluklar</h4>
-      <ul style="list-style: none; margin: 0; padding: 0;">
-        <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
-          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
-          Çok sayıda ekibin ortak paydası olan bir ürünün koordinasyonu ve sorumluluk sınırlarının netleştirilmesi
-        </li>
-        <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
-          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
-          Know-how eksikliği olan noktalarda tersine mühendislik yaparak sistemin davranışlarını analiz etmek
-        </li>
-      </ul>
-    </div>
+{ 
+  type: 'bottomText', 
+  content: `<div style="margin-bottom: 24px;">
+  <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Zorluklar</h4>
+  <ul style="list-style: none; margin: 0; padding: 0;">
+    <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+      <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
+      Çok sayıda ekibin ortak paydası olan bir ürünün koordinasyonu ve sorumluluk sınırlarının netleştirilmesi
+    </li>
+    <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+      <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
+      Know-how eksikliği olan noktalarda tersine mühendislik yaparak sistemin davranışlarını analiz etmek
+    </li>
+  </ul>
+</div>
 
-    <div>
-      <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Çıkarılan Dersler</h4>
-      <ul style="list-style: none; margin: 0; padding: 0;">
-        <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
-          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
-          Büyük ölçekli projelerde erken aşamada yapılan strateji analizi ve bulguların kayıt altına alınması, ilerleyen süreçteki anlaşmazlıkların çözümünü doğrudan kolaylaştırır
-        </li>
-        <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
-          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
-          Çözüm odaklı ekip yapısı kritik olmakla birlikte, her paydaşın kendi önceliklerini göz önünde bulunduran bir yönetim yaklaşımı şarttır
-        </li>
-      </ul>
-    </div>` 
-  }
+<div>
+  <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Çıkarılan Dersler</h4>
+  <ul style="list-style: none; margin: 0; padding: 0;">
+    <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+      <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+      <span style="font-weight: 600; color: #1c1a18;">Early Documentation:</span> Büyük ölçekli projelerde erken aşamada yapılan strateji analizi ve bulguların kayıt altına alınması, ilerleyen süreçteki anlaşmazlıkları önlemenin en etkili yoludur
+    </li>
+    <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+      <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+      <span style="font-weight: 600; color: #1c1a18;">Reverse Engineering:</span> Az dokümantasyonlu yapılarda tersine mühendislik ile ilerlemenin ne zaman yeterli, ne zaman yetersiz kalacağını öngörmek kritik bir beceridir — doğru noktada flag kaldırarak bilgi aktarımı talep etmek süreci tıkanmaktan kurtarır
+    </li>
+    <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+      <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+      <span style="font-weight: 600; color: #1c1a18;">Test Automation:</span> Script ile test verisi üretmek, karma senaryoların kapsamını genişletirken tekrar kullanılabilir bir test altyapısı kurmanın da temelini atar
+    </li>
+    <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+      <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+      <span style="font-weight: 600; color: #1c1a18;">Dependency Management:</span> Çok paydaşlı yapılarda her ekibin kendi öncelikleri ve takvimi olduğunu göz önünde bulundurarak bağımlılıkların ve sorumluluk alanlarının netleştirilmesi projenin sağlıklı ilerlemesi için hayati önem taşır
+    </li>
+  </ul>
+</div>` 
+}
 ]
 
 
