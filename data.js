@@ -122,8 +122,7 @@ Büyük ölçekli projelerde erken aşamada yapılan strateji analizi ve bulgula
       <text x="605" y="91" text-anchor="middle" fill="#6b6560" font-size="9">Rapor</text>
       <text x="605" y="106" text-anchor="middle" fill="#6b6560" font-size="9">& Log</text>
     </svg>` },
-      { type: 'bottomText', content: 'Mevzuat değişikliklerine paralel kara liste güncelleme süreçleri optimize edildi; yeni ekran bileşenleri kullanıcı geri bildirimleriyle şekillendirildi.' },
-      { type: 'image', content: 'images/ts-aml.png' }
+      { type: 'bottomText', content: 'Mevzuat değişikliklerine paralel kara liste güncelleme süreçleri optimize edildi; yeni ekran bileşenleri kullanıcı geri bildirimleriyle şekillendirildi.' }
     ]
   },
   'ts-sbm': {
