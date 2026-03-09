@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 500" width="1560" height="500" font-family="Georgia, serif">
+  <style>
+    .ant-gray   { stroke-dasharray: 6; stroke-dashoffset: 12; animation: march 0.6s linear infinite; }
+    .ant-green  { stroke-dasharray: 6; stroke-dashoffset: 12; animation: march 0.5s linear infinite; }
+    .ant-red    { stroke-dasharray: 6; stroke-dashoffset: 12; animation: march 0.7s linear infinite; }
+    .ant-orange { stroke-dasharray: 6; stroke-dashoffset: 12; animation: march 0.65s linear infinite; }
+    .ant-dashed { stroke-dasharray: 4 3; stroke-dashoffset: 14; animation: march 0.8s linear infinite; }
+    @keyframes march { to { stroke-dashoffset: 0; } }
+  </style>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6b6b6b"/>
+    </marker>
+    <marker id="arr-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+    <marker id="arr-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e67e22"/>
+    </marker>
+    <filter id="sh" x="-5%" y="-5%" width="115%" height="125%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#00000015"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1560" height="500" fill="#f7f5f0"/>
+
+  <!-- ══ HEADER ══ -->
+  <text x="780" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c2c2c" letter-spacing="1">3D TAHSILAT MODULU — AKIS DIYAGRAMI</text>
+  <text x="780" y="40" text-anchor="middle" font-size="9" fill="#999" letter-spacing="2">ALLIANZ · MOBIL EKIP · HAYAT URUNLERI</text>
+  <rect x="628" y="47" width="64" height="15" rx="7" fill="#eee" stroke="#ccc" stroke-width="0.7"/>
+  <text x="660" y="58" text-anchor="middle" font-size="7" fill="#555">REST API</text>
+  <rect x="698" y="47" width="62" height="15" rx="7" fill="#eee" stroke="#ccc" stroke-width="0.7"/>
+  <text x="729" y="58" text-anchor="middle" font-size="7" fill="#555">3D Secure</text>
+  <rect x="766" y="47" width="36" height="15" rx="7" fill="#eee" stroke="#ccc" stroke-width="0.7"/>
+  <text x="784" y="58" text-anchor="middle" font-size="7" fill="#555">Java</text>
+  <rect x="808" y="47" width="44" height="15" rx="7" fill="#eee" stroke="#ccc" stroke-width="0.7"/>
+  <text x="830" y="58" text-anchor="middle" font-size="7" fill="#555">Oracle</text>
+  <rect x="858" y="47" width="52" height="15" rx="7" fill="#eee" stroke="#ccc" stroke-width="0.7"/>
+  <text x="884" y="58" text-anchor="middle" font-size="7" fill="#555">Mobile</text>
+  <line x1="40" y1="70" x2="1520" y2="70" stroke="#ddd" stroke-width="0.5"/>
+
+  <!-- ══ N1: Mobil Uygulama  x=40 w=140 cx=110 ══ -->
+  <rect x="40" y="163" width="140" height="64" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="110" y="186" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c2c2c">Mobil Uygulama</text>
+  <text x="110" y="200" text-anchor="middle" font-size="8" fill="#888">Police Ekrani</text>
+  <text x="110" y="213" text-anchor="middle" font-size="8" fill="#888">Kullanici Girisi</text>
+  <line x1="180" y1="195" x2="212" y2="195" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N2: 3D Tahsilat Kontrol Servisi  x=212 w=140 cx=282 ══ -->
+  <rect x="212" y="155" width="140" height="80" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="212" y="155" width="140" height="18" rx="6" fill="#e8e3d8"/>
+  <rect x="212" y="165" width="140" height="8" fill="#e8e3d8"/>
+  <text x="282" y="167" text-anchor="middle" font-size="8" font-weight="bold" fill="#2c2c2c">3D Tahsilat Kontrol Servisi</text>
+  <text x="282" y="184" text-anchor="middle" font-size="7.5" fill="#888">Akisi baslatir ve yonetir</text>
+  <text x="282" y="196" text-anchor="middle" font-size="7.5" fill="#888">Tum adimlari koordine eder</text>
+  <text x="282" y="208" text-anchor="middle" font-size="7" fill="#aaa">High-level orchestrator</text>
+  <text x="282" y="227" text-anchor="middle" font-size="7" fill="#aaa">Surece konu urun kontrolu</text>
+  <line x1="352" y1="195" x2="384" y2="195" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N3: Is Kurallari  x=384 w=160 cx=464 ══ -->
+  <rect x="384" y="128" width="160" height="154" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="384" y="128" width="160" height="18" rx="6" fill="#e8e3d8"/>
+  <rect x="384" y="138" width="160" height="8" fill="#e8e3d8"/>
+  <text x="464" y="140" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">Is Kurallari Kontrolu</text>
+  <text x="394" y="160" font-size="7.5" fill="#555">• Hayat urunu dogrulamasi</text>
+  <text x="394" y="173" font-size="7.5" fill="#555">• Police statusu / durumu</text>
+  <text x="394" y="186" font-size="7.5" fill="#555">• Odenmeyen borc</text>
+  <text x="394" y="199" font-size="7.5" fill="#2c2c2c">• Odenebilir saat araligi</text>
+  <text x="394" y="212" font-size="7.5" fill="#2c2c2c">• Kur guncel mi? (T-1) ★</text>
+  <text x="394" y="225" font-size="7.5" fill="#555">• Sorunlu police gecmisi</text>
+  <text x="394" y="238" font-size="7" fill="#aaa">  migration / teknik engel</text>
+  <line x1="544" y1="195" x2="576" y2="195" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N4: Ekran Yonlendirme  x=576 w=162 cx=657 ══ -->
+  <rect x="576" y="108" width="162" height="202" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="576" y="108" width="162" height="18" rx="6" fill="#e8e3d8"/>
+  <rect x="576" y="118" width="162" height="8" fill="#e8e3d8"/>
+  <text x="657" y="120" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">Ekran Yonlendirme</text>
+  <rect x="584" y="132" width="146" height="36" rx="4" fill="#edf7ed" stroke="#a8d5a2" stroke-width="0.8"/>
+  <text x="592" y="146" font-size="7.5" fill="#27ae60" font-weight="bold">Statu X →</text>
+  <text x="592" y="160" font-size="7.5" fill="#2c2c2c">Tek toplam tutar ekrani</text>
+  <rect x="584" y="174" width="146" height="36" rx="4" fill="#edf7ed" stroke="#a8d5a2" stroke-width="0.8"/>
+  <text x="592" y="188" font-size="7.5" fill="#27ae60" font-weight="bold">Statu Y →</text>
+  <text x="592" y="202" font-size="7.5" fill="#2c2c2c">Vade listesi ekrani</text>
+  <rect x="584" y="216" width="146" height="36" rx="4" fill="#fff8e1" stroke="#f0c040" stroke-width="0.8"/>
+  <text x="592" y="230" font-size="7.5" fill="#e67e22" font-weight="bold">Saat / Kur hatasi →</text>
+  <text x="592" y="244" font-size="7.5" fill="#2c2c2c">Odeme engellenir</text>
+  <rect x="584" y="258" width="146" height="36" rx="4" fill="#fdecea" stroke="#e0a0a0" stroke-width="0.8"/>
+  <text x="592" y="272" font-size="7.5" fill="#c0392b" font-weight="bold">Kural Ihlali →</text>
+  <text x="592" y="286" font-size="7.5" fill="#2c2c2c">Hata mesaji gosterilir</text>
+  <!-- warn drop -->
+  <line x1="657" y1="310" x2="657" y2="352" stroke="#e67e22" stroke-width="1.1" marker-end="url(#arr-orange)" class="ant-orange"/>
+  <rect x="584" y="352" width="146" height="34" rx="6" fill="#fff3e0" stroke="#e67e22" stroke-width="1.1"/>
+  <text x="657" y="367" text-anchor="middle" font-size="8" fill="#e67e22" font-weight="bold">Kullanici Bilgilendirme</text>
+  <!-- N4→N5 -->
+  <line x1="738" y1="195" x2="770" y2="195" stroke="#27ae60" stroke-width="1.3" marker-end="url(#arr-green)" class="ant-green"/>
+
+  <!-- ══ N5: Kart Bilgisi  x=770 w=140 cx=840 ══ -->
+  <rect x="770" y="148" width="140" height="94" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="770" y="148" width="140" height="18" rx="6" fill="#e8e3d8"/>
+  <rect x="770" y="158" width="140" height="8" fill="#e8e3d8"/>
+  <text x="840" y="160" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">Kart Bilgisi</text>
+  <text x="840" y="178" text-anchor="middle" font-size="7.5" fill="#888">Secim ve kart girisi</text>
+  <text x="840" y="191" text-anchor="middle" font-size="7.5" fill="#888">Kullanici odemeyi onaylar</text>
+  <text x="840" y="204" text-anchor="middle" font-size="7.5" fill="#555">Kart dogrulama</text>
+  <text x="840" y="217" text-anchor="middle" font-size="7.5" fill="#555">Hata senaryolari</text>
+  <!-- kart hata çift yönlü ok -->
+  <line x1="840" y1="242" x2="840" y2="282" stroke="#c0392b" stroke-width="1.1" marker-end="url(#arr-red)" class="ant-red"/>
+  <line x1="836" y1="282" x2="836" y2="242" stroke="#c0392b" stroke-width="1.1" marker-end="url(#arr-red)" class="ant-red"/>
+  <rect x="770" y="282" width="140" height="36" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+  <text x="840" y="298" text-anchor="middle" font-size="8" fill="#c0392b" font-weight="bold">Kart Hatasi</text>
+  <text x="840" y="311" text-anchor="middle" font-size="7.5" fill="#c0392b">Kart dogrulama / odeme hatasi</text>
+
+  <line x1="910" y1="195" x2="942" y2="195" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N6: Odeme Gateway  x=942 w=156 cx=1020 ══ -->
+  <rect x="942" y="118" width="156" height="152" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="942" y="118" width="156" height="18" rx="6" fill="#d5e8d4"/>
+  <rect x="942" y="128" width="156" height="8" fill="#d5e8d4"/>
+  <text x="1020" y="130" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">Odeme Gateway</text>
+  <text x="952" y="150" font-size="7.5" fill="#555">Core: Tahsilat Paketi</text>
+  <text x="952" y="163" font-size="7.5" fill="#555">• 3D Secure akisi</text>
+  <text x="952" y="176" font-size="7.5" fill="#555">• Timeout kontrolu</text>
+  <text x="952" y="189" font-size="7.5" fill="#555">• Hata yonetimi</text>
+  <text x="952" y="202" font-size="7.5" fill="#555">• Mukerrer odeme kontrolu</text>
+  <text x="952" y="215" font-size="7" fill="#aaa">Odeme servis saglayicisi</text>
+  <text x="952" y="227" font-size="7" fill="#aaa">3D Secure dogrulama akisi</text>
+  <!-- fail drop -->
+  <line x1="1020" y1="270" x2="1020" y2="310" stroke="#c0392b" stroke-width="1.2" marker-end="url(#arr-red)" class="ant-red"/>
+  <text x="1026" y="293" font-size="7.5" fill="#c0392b">Basarisiz</text>
+  <rect x="942" y="310" width="156" height="62" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="1.1" filter="url(#sh)"/>
+  <text x="1020" y="328" text-anchor="middle" font-size="8.5" fill="#c0392b" font-weight="bold">Hata / Retry</text>
+  <text x="952" y="343" font-size="7.5" fill="#c0392b">• 3D Secure basarisiz</text>
+  <text x="952" y="356" font-size="7.5" fill="#c0392b">• Timeout / baglanti hatasi</text>
+  <text x="952" y="368" font-size="7" fill="#aaa">Retry-catch devreye girer</text>
+  <!-- N6→N7 -->
+  <line x1="1098" y1="195" x2="1130" y2="195" stroke="#27ae60" stroke-width="1.3" marker-end="url(#arr-green)" class="ant-green"/>
+  <text x="1106" y="190" font-size="7.5" fill="#27ae60">Basarili</text>
+
+  <!-- ══ N7: Tahsilat Police Isleme  x=1130 w=156 cx=1208 ══ -->
+  <rect x="1130" y="128" width="156" height="112" rx="6" fill="#fff" stroke="#4ade80" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="1130" y="128" width="156" height="18" rx="6" fill="#d5e8d4"/>
+  <rect x="1130" y="138" width="156" height="8" fill="#d5e8d4"/>
+  <text x="1208" y="140" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">Tahsilat Police Isleme</text>
+  <text x="1140" y="160" font-size="7.5" fill="#555">Tahsilat basariyla yazildi</text>
+  <text x="1140" y="173" font-size="7.5" fill="#555">Frontend JS yenilenir</text>
+  <text x="1140" y="186" font-size="7.5" fill="#555">Success page acilir</text>
+  <text x="1140" y="199" font-size="7" fill="#aaa">is kurali: yazma basarisi sarti</text>
+  <text x="1140" y="232" font-size="7" fill="#aaa"> </text>
+  <!-- yazma hatasi drop -->
+  <line x1="1208" y1="240" x2="1208" y2="280" stroke="#c0392b" stroke-width="1.1" marker-end="url(#arr-red)" class="ant-dashed"/>
+  <rect x="1130" y="280" width="156" height="52" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+  <text x="1208" y="298" text-anchor="middle" font-size="8.5" fill="#c0392b" font-weight="bold">Yazma Hatasi</text>
+  <text x="1140" y="313" font-size="7.5" fill="#c0392b">Alarm tetiklenir (core)</text>
+  <text x="1140" y="326" font-size="7.5" fill="#c0392b">T+1 manuel inceleme</text>
+  <!-- N7→N8 -->
+  <line x1="1286" y1="195" x2="1318" y2="195" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N8: Arka Plan Kontrolleri  x=1318 w=200 cx=1418 ══ -->
+  <rect x="1318" y="128" width="200" height="152" rx="6" fill="#fff" stroke="#4ade80" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="1318" y="128" width="200" height="18" rx="6" fill="#d5e8d4"/>
+  <rect x="1318" y="138" width="200" height="8" fill="#d5e8d4"/>
+  <text x="1418" y="140" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">Arka Plan Kontrolleri</text>
+  <text x="1328" y="160" font-size="7.5" fill="#555">• Tahsilat kontrol sorgulari</text>
+  <text x="1328" y="173" font-size="7.5" fill="#2c2c2c">• Hatali tahsilat tespiti</text>
+  <text x="1328" y="186" font-size="7.5" fill="#555">• Retry-catch senaryolari</text>
+  <text x="1328" y="199" font-size="7.5" fill="#555">• DB yazimi / guncelleme</text>
+  <text x="1328" y="212" font-size="7.5" fill="#555">• Raporlama</text>
+  <text x="1328" y="228" font-size="7" fill="#aaa">Asenkron · bloklamaz</text>
+  <text x="1328" y="240" font-size="7" fill="#aaa">Arka planda surekli calisir</text>
+
+  <!-- ══ LEGEND ══ -->
+  <line x1="40" y1="418" x2="1520" y2="418" stroke="#ddd" stroke-width="0.5"/>
+  <rect x="530" y="430" width="12" height="12" rx="2" fill="#d5e8d4" stroke="#a8d5a2" stroke-width="0.8"/>
+  <text x="548" y="441" font-size="8" fill="#666">Basarili akis</text>
+  <rect x="650" y="430" width="12" height="12" rx="2" fill="#fdecea" stroke="#e0a0a0" stroke-width="0.8"/>
+  <text x="668" y="441" font-size="8" fill="#666">Hata / Retry</text>
+  <rect x="770" y="430" width="12" height="12" rx="2" fill="#fff3e0" stroke="#f0c040" stroke-width="0.8"/>
+  <text x="788" y="441" font-size="8" fill="#666">Kural ihlali / Engel</text>
+  <rect x="930" y="430" width="12" height="12" rx="2" fill="#e8e3d8" stroke="#ccc" stroke-width="0.8"/>
+  <text x="948" y="441" font-size="8" fill="#666">Islem / Surec</text>
+
+</svg>

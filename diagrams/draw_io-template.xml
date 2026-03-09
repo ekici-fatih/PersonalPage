@@ -1,0 +1,159 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Portfolio Template">
+    <mxGraphModel dx="1422" dy="762" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0" background="#f7f5f0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ═══════════════════════════════ -->
+        <!-- STYLE REFERENCE PANEL          -->
+        <!-- ═══════════════════════════════ -->
+
+        <mxCell id="ref-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9e0;strokeColor=#d0cbbf;fontSize=10;fontFamily=Georgia;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="200" height="400" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref-title" value="STYLE REFERENCE" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontStyle=1;fontFamily=Georgia;letterSpacing=2;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="40" y="48" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref-line" value="" style="line;strokeColor=#cccccc;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="68" width="180" height="10" as="geometry"/>
+        </mxCell>
+
+        <!-- Standard Node -->
+        <mxCell id="ref-std" value="&lt;b&gt;Standard Node&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#888888&#39; style=&#39;font-size:8px&#39;&gt;Alt aciklama metni&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bbbbbb;strokeWidth=1;fontFamily=Georgia;fontSize=11;arcSize=8;shadow=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="65" y="85" width="150" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Header Node -->
+        <mxCell id="ref-header" value="&lt;b&gt;Header Node&lt;/b&gt;&lt;hr/&gt;&lt;font color=&#39;#555555&#39; style=&#39;font-size:8px&#39;&gt;• Madde 1&lt;br/&gt;• Madde 2&lt;br/&gt;• Madde 3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bbbbbb;strokeWidth=1;fontFamily=Georgia;fontSize=10;arcSize=5;align=left;spacingLeft=10;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="65" y="150" width="150" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Success Node -->
+        <mxCell id="ref-success" value="&lt;b&gt;Success Node&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555555&#39; style=&#39;font-size:8px&#39;&gt;Basarili islem&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#4ade80;strokeWidth=1;fontFamily=Georgia;fontSize=10;arcSize=8;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="65" y="245" width="150" height="44" as="geometry"/>
+        </mxCell>
+
+        <!-- Error Node -->
+        <mxCell id="ref-error" value="&lt;b&gt;Error Node&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#c0392b&#39; style=&#39;font-size:8px&#39;&gt;Hata / Engel&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fdecea;strokeColor=#c0392b;strokeWidth=1;fontFamily=Georgia;fontSize=10;fontColor=#c0392b;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="65" y="304" width="150" height="44" as="geometry"/>
+        </mxCell>
+
+        <!-- Warning Node -->
+        <mxCell id="ref-warn" value="&lt;b&gt;Warning Node&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#e67e22&#39; style=&#39;font-size:8px&#39;&gt;Uyari / Kural ihlali&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e67e22;strokeWidth=1;fontFamily=Georgia;fontSize=10;fontColor=#e67e22;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="65" y="363" width="150" height="44" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════ -->
+        <!-- CONNECTOR STYLE REFERENCE      -->
+        <!-- ═══════════════════════════════ -->
+
+        <mxCell id="ref-conn-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9e0;strokeColor=#d0cbbf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="460" width="200" height="200" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref-conn-title" value="CONNECTOR REFERENCE" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontStyle=1;fontFamily=Georgia;letterSpacing=2;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="40" y="468" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref-conn-line2" value="" style="line;strokeColor=#cccccc;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="488" width="180" height="10" as="geometry"/>
+        </mxCell>
+
+        <!-- connector examples as labels -->
+        <mxCell id="ref-c1" value="→ Standard flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontFamily=Georgia;fontColor=#6b6b6b;" vertex="1" parent="1">
+          <mxGeometry x="55" y="500" width="170" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref-c2" value="→ Success (green)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontFamily=Georgia;fontColor=#27ae60;" vertex="1" parent="1">
+          <mxGeometry x="55" y="522" width="170" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref-c3" value="→ Error (red)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontFamily=Georgia;fontColor=#c0392b;" vertex="1" parent="1">
+          <mxGeometry x="55" y="544" width="170" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref-c4" value="- - → Dashed error" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontFamily=Georgia;fontColor=#c0392b;" vertex="1" parent="1">
+          <mxGeometry x="55" y="566" width="170" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref-c5" value="→ Warning (amber)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontFamily=Georgia;fontColor=#e67e22;" vertex="1" parent="1">
+          <mxGeometry x="55" y="588" width="170" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref-c6" value="Font: Georgia · Size: 8-11px" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;fontFamily=Georgia;fontColor=#aaaaaa;" vertex="1" parent="1">
+          <mxGeometry x="55" y="618" width="170" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ref-c7" value="BG: #f7f5f0 · Border: #bbbbbb" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;fontFamily=Georgia;fontColor=#aaaaaa;" vertex="1" parent="1">
+          <mxGeometry x="55" y="634" width="170" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════ -->
+        <!-- DEMO DIAGRAM AREA              -->
+        <!-- ═══════════════════════════════ -->
+
+        <mxCell id="demo-label" value="DEMO AKIS" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=9;fontStyle=1;fontFamily=Georgia;letterSpacing=2;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="290" y="48" width="120" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Demo Node 1 -->
+        <mxCell id="d1" value="&lt;b&gt;Baslangic&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#888888&#39; style=&#39;font-size:8px&#39;&gt;Aciklama metni&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bbbbbb;strokeWidth=1;fontFamily=Georgia;fontSize=11;arcSize=8;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="80" width="140" height="54" as="geometry"/>
+        </mxCell>
+
+        <!-- Demo Decision -->
+        <mxCell id="d2" value="&lt;b&gt;Karar&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bbbbbb;strokeWidth=1;fontFamily=Georgia;fontSize=10;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="75" width="100" height="64" as="geometry"/>
+        </mxCell>
+
+        <!-- Demo Process -->
+        <mxCell id="d3" value="&lt;b&gt;Islem&lt;/b&gt;&lt;hr/&gt;&lt;font color=&#39;#555555&#39; style=&#39;font-size:8px&#39;&gt;• Adim 1&lt;br/&gt;• Adim 2&lt;br/&gt;• Adim 3&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bbbbbb;strokeWidth=1;fontFamily=Georgia;fontSize=10;arcSize=5;align=left;spacingLeft=10;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="68" width="150" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Demo Success -->
+        <mxCell id="d4" value="&lt;b&gt;Basarili Sonuc&lt;/b&gt;&lt;br/&gt;&lt;font color=&#39;#555555&#39; style=&#39;font-size:8px&#39;&gt;Islem tamamlandi&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#4ade80;strokeWidth=1;fontFamily=Georgia;fontSize=10;arcSize=8;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="830" y="80" width="150" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Demo Error -->
+        <mxCell id="d5" value="&lt;b&gt;Hata&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:8px&#39;&gt;Hata aciklamasi&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fdecea;strokeColor=#c0392b;strokeWidth=1;fontFamily=Georgia;fontSize=10;fontColor=#c0392b;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="190" width="140" height="44" as="geometry"/>
+        </mxCell>
+
+        <!-- Demo edges -->
+        <mxCell id="de1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6b6b6b;strokeWidth=1.2;fontFamily=Georgia;fontSize=9;endArrow=block;endFill=1;" edge="1" source="d1" target="d2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="de2" value="E" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#27ae60;strokeWidth=1.2;fontFamily=Georgia;fontSize=9;fontColor=#27ae60;fontStyle=1;endArrow=block;endFill=1;" edge="1" source="d2" target="d3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="de3" value="H" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#c0392b;strokeWidth=1.2;fontFamily=Georgia;fontSize=9;fontColor=#c0392b;fontStyle=1;endArrow=block;endFill=1;" edge="1" source="d2" target="d5" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="de4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6b6b6b;strokeWidth=1.2;fontFamily=Georgia;fontSize=9;endArrow=block;endFill=1;" edge="1" source="d3" target="d4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════ -->
+        <!-- LEGEND TEMPLATE                -->
+        <!-- ═══════════════════════════════ -->
+
+        <mxCell id="leg-box" value="&lt;b&gt;OZEL KATKILAR&lt;/b&gt;&lt;br/&gt;★  Katki 1 aciklamasi buraya yazilir&lt;br/&gt;★  Katki 2 aciklamasi buraya yazilir&lt;br/&gt;★  Katki 3 aciklamasi buraya yazilir" style="text;html=1;strokeColor=#dddddd;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=12;spacingTop=8;rounded=1;fontSize=9;fontFamily=Georgia;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="300" width="500" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Tech Tags -->
+        <mxCell id="tag1" value="REST API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#cccccc;fontSize=8;fontFamily=Georgia;arcSize=50;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="290" y="400" width="70" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="tag2" value="3D Secure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#cccccc;fontSize=8;fontFamily=Georgia;arcSize=50;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="368" y="400" width="70" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="tag3" value="Java" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#cccccc;fontSize=8;fontFamily=Georgia;arcSize=50;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="446" y="400" width="50" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="tag4" value="Oracle" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#cccccc;fontSize=8;fontFamily=Georgia;arcSize=50;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="504" y="400" width="56" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="tag5" value="Integration Testing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#cccccc;fontSize=8;fontFamily=Georgia;arcSize=50;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="568" y="400" width="110" height="22" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
