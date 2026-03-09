@@ -18,15 +18,23 @@ const slidesMeta = [
     tag: 'Profesyonel Deneyim',
     company: 'Deneyimler',
     period: '2018 - Günümüz',
-    desc: 'Hayat sigortası ve genel sigorta alanında 5+ yıl deneyim. Microservice mimarisi, mobil sistemler, entegrasyon projeleri, hasar yönetimi, yapay zeka uygulamaları ve sistem analizi konularında çalışmalar yürüttüm.',
+    
+    desc: `Hayat sigortası ve Elementer sigorta alanında 4 yılı aşkın süredir 2 büyük sigorta şirketinde iş analisti olarak görev yaptım.Kariyerime bu alanda devam etmekteyim.
+    Bir iş analistinin asli görevleri olan süreç analizi gereksinim toplama ve dökümantasyonun yanı sıra sahip olduğum veri analizi ve teknik bilgi birikimiyle projelerin teknik tasarım ve geliştirme süreçlerine de aktif katkılar sağladım.
+    Aşağıda her projeye dair süreç akışlarını, karşılaşılan zorlukları ve üretilen çözümleri detaylıca bulabilirsiniz.
+    `,
+    
+    
+    
+    
     skills: ['Microservice', 'Mobil Sistemler', 'REST API', 'Oracle', 'Java', 'Agile', 'Sistem Analizi', 'Hasar Yönetimi'],
     cards: [
       { id: 'az-1', num: '01', title: 'Hayat Sistemleri Yeni Ürün Geçişleri', desc: 'Mevcut sistemlerin yeni ürün yapılarına uyarlanması ve geçiş süreçlerinin yönetimi' },
-      { id: 'ts-aml',     icon: '🛡️', title: 'AML & Kara Liste Sistemleri',    desc: 'Kara liste entegrasyonu ve AML süreçlerinin analizi' },
-      { id: 'ts-sbm',     icon: '🔗', title: 'SBM Ortak Veri Modeli',           desc: 'Sektör veri standardizasyonu ve SBM entegrasyonu' },
-      { id: 'ts-chatbot', icon: '🤖', title: 'Chatbot & AI Asistan',            desc: 'Müşteri hizmetleri için yapay zeka tabanlı chatbot geliştirme' },
-      { id: 'ts-btrans',  icon: '🔄', title: 'BTrans Veri Paylaşımı Modernizasyonu',     desc: 'Veri aktarım uygulamasının modernizasyonu ve online sisteme geçişi' },
-      { id: 'ts-bpmn',    icon: '📋', title: 'BPMN Süreç Modelleme',            desc: 'İş süreçlerinin BPMN ile modellenmesi' },
+      { id: 'ts-sbm', num:'02',     icon: '🔗', title: 'SBM Ortak Veri Modeli',           desc: 'Sektör veri standardizasyonu ve SBM entegrasyonu' },
+      { id: 'ts-chatbot', num:'03', icon: '🤖', title: 'Chatbot & AI Asistan',            desc: 'Müşteri hizmetleri için yapay zeka tabanlı chatbot geliştirme' },
+      { id: 'ts-btrans',  num:'04',  icon: '🔄', title: 'BTrans Veri Paylaşımı Modernizasyonu',     desc: 'Veri aktarım uygulamasının modernizasyonu ve online sisteme geçişi' },
+      { id: 'ts-bpmn',    num:'05',    icon: '📋', title: 'BPMN Süreç Modelleme',            desc: 'İş süreçlerinin BPMN ile modellenmesi' },
+       { id: 'ts-aml', num:'06',     icon: '🛡️', title: 'AML & Kara Liste Sistemleri',    desc: 'Kara liste entegrasyonu ve AML süreçlerinin analizi' },
     ]
   },
   {
@@ -41,7 +49,6 @@ const slidesMeta = [
     cards: [
       { id: 'interest-agile',   num: '01', title: 'Agile & Ürün Yönetimi', desc: 'Scrum, Kanban ve modern ürün geliştirme metodolojileri' },
       { id: 'interest-llm',     num: '02', title: 'LLM & AI Araçları',     desc: 'Büyük dil modelleri ve iş analizine uygulamaları' },
-      { id: 'interest-browser', num: '03', title: 'Browser Automation',    desc: 'Web otomasyon araçları ve test süreçleri' },
     ]
   }
 ];
@@ -313,41 +320,6 @@ const projects = {
     </svg>` },
       { type: 'bottomText', content: 'Veri gizliligi gerektiren senaryolarda yerel LLM çalıştırmanın avantajları ve kurumsal süreçlere entegrasyon potansiyeli üzerine aktif araştırma.' },
       { type: 'image', content: 'images/interest-llm.png' }
-    ]
-  },
-  'interest-browser': {
-    tag: 'Ilgi Alani',
-    title: 'Browser Use',
-    stack: ['browser-use', 'Playwright', 'Python', 'LLM Agent', 'Otomasyon'],
-    sections: [
-      { type: 'text', content: 'AI destekli tarayıcı otomasyon araçlarını takip ediyor, browser-use kütüphanesi ve Playwright tabanlı agent deneyleri yapıyorum. Tekrarlayan web işlemlerini otomatize etmenin pratik sınırlarını keşfediyorum.' },
-      { type: 'svg', content: `<svg viewBox="0 0 640 160" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans,sans-serif">
-      <rect x="20" y="40" width="120" height="80" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="80" y="73" text-anchor="middle" fill="#6b6560" font-size="10">AI Agent</text>
-      <text x="80" y="89" text-anchor="middle" fill="#b5472a" font-size="11">LLM</text>
-      <text x="80" y="105" text-anchor="middle" fill="#6b6560" font-size="9">Karar Motoru</text>
-      <line x1="140" y1="80" x2="188" y2="80" stroke="#b5472a44" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <polygon points="188,75 200,80 188,85" fill="#b5472a44"/>
-      <rect x="200" y="28" width="140" height="104" rx="4" fill="#e8e0d4" stroke="#b5472a77" stroke-width="1.5"/>
-      <text x="270" y="56" text-anchor="middle" fill="#6b6560" font-size="10">Browser Controller</text>
-      <line x1="215" y1="66" x2="325" y2="66" stroke="#b5472a15" stroke-width="1"/>
-      <text x="270" y="83" text-anchor="middle" fill="#8b3520" font-size="10">Playwright</text>
-      <text x="270" y="99" text-anchor="middle" fill="#6b6560" font-size="9">DOM Okuma · Tıklama</text>
-      <text x="270" y="115" text-anchor="middle" fill="#6b6560" font-size="9">Screenshot -&gt; LLM</text>
-      <line x1="340" y1="65" x2="390" y2="48" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <line x1="340" y1="100" x2="390" y2="118" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <rect x="390" y="30" width="120" height="36" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="450" y="52" text-anchor="middle" fill="#b5472a" font-size="10">Web Scraping</text>
-      <rect x="390" y="102" width="120" height="36" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="450" y="124" text-anchor="middle" fill="#b5472a" font-size="10">Görev Otomasyonu</text>
-      <line x1="510" y1="48" x2="558" y2="68" stroke="#b5472a22" stroke-width="1"/>
-      <line x1="510" y1="120" x2="558" y2="96" stroke="#b5472a22" stroke-width="1"/>
-      <rect x="558" y="56" width="72" height="48" rx="4" fill="#f0ebe3" stroke="#b5472a15" stroke-width="1"/>
-      <text x="594" y="76" text-anchor="middle" fill="#6b6560" font-size="9">Çiktı</text>
-      <text x="594" y="92" text-anchor="middle" fill="#6b6560" font-size="9">ve Rapor</text>
-    </svg>` },
-      { type: 'bottomText', content: 'Browser-use, Stagehand gibi yeni nesil araçlarla AI nin web üzerinde otonom hareket etme kapasitesini test ediyorum.' },
-      { type: 'image', content: 'images/interest-browser.png' }
     ]
   }
 }
