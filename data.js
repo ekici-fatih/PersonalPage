@@ -29,8 +29,8 @@ const slidesMeta = [
     
     skills: ['Microservice', 'Mobil Sistemler', 'REST API', 'Oracle', 'Java', 'Agile', 'Sistem Analizi', 'Hasar Yönetimi'],
     cards: [
-      { id: 'az-1', num: '01', title: 'Hayat Sistemleri Yeni Ürün Geçişleri', desc: 'Mevcut sistemlerin yeni ürün yapılarına uyarlanması ve geçiş süreçlerinin yönetimi' },
-      { id: 'ts-sbm', num:'02',     icon: '🔗', title: 'SBM Ortak Veri Modeli',           desc: 'Sektör veri standardizasyonu ve SBM entegrasyonu' },
+      { id: 'az-1', num: '01', title: 'Mobil 3D Tahsilat entegrasyonu', desc: 'Mevcut sistemlerin yeni ürün yapılarına uyarlanması ve geçiş süreçlerinin yönetimi' },
+      { id: 'ts-sbm', num:'02',     icon: '🔗', title: 'Sigorta üretim',           desc: 'Sektör veri standardizasyonu ve SBM entegrasyonu' },
       { id: 'ts-chatbot', num:'03', icon: '🤖', title: 'Chatbot & AI Asistan',            desc: 'Müşteri hizmetleri için yapay zeka tabanlı chatbot geliştirme' },
       { id: 'ts-btrans',  num:'04',  icon: '🔄', title: 'BTrans Veri Paylaşımı Modernizasyonu',     desc: 'Veri aktarım uygulamasının modernizasyonu ve online sisteme geçişi' },
       { id: 'ts-bpmn',    num:'05',    icon: '📋', title: 'BPMN Süreç Modelleme',            desc: 'İş süreçlerinin BPMN ile modellenmesi' },
@@ -62,7 +62,9 @@ const projects = {
     sections: [
       { type: 'text', content: `Mevcut hayat sigortası sistemlerinin yeni ürün yapılarına uyarlanması sürecinde aktif rol üstlendim.
          Ürün parametrelerinin yeni şemaya taşınması, veri doğrulama adımlarının oluşturulması ve regresyon testlerinin koordinasyonunu yürüttüm.` },
-      { type: 'svg', content: 'diagrams/tahsilat-akis-en.svg' },
+        { type: 'svg', content: 'diagrams/tahsilat-akis-en.svg' },
+         {type:'text', content: 'Bu süreçte teknik gereksinim analizi yaparak geçiş planlaması ve UAT süreçlerinde koordinatör rolü üstlendim.'},
+       
       { type: 'bottomText', content: 'Waterfall metodolojisi kapsamında teknik gereksinim analizi, geçiş planlaması ve UAT süreçlerinde koordinatör rolü üstlenildi.' },
       { type: 'image', content: 'images/az-gecis.png' }
     ]
