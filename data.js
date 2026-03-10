@@ -307,44 +307,29 @@ Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.`
   },
   'ts-bpmn': {
     tag: '',
-    title: 'BPMN & Test Anonimleştirme',
-    stack: ['BPMN', 'Süreç Analizi', 'POC', 'Veri Maskeleme', 'Dokümantasyon'],
+    title: 'BPMN Süreç Orkestrasyon',
+    stack: ['BPMN', 'Süreç Analizi', 'Hasar Yönetimi', 'Sistem Entegrasyonu'],
     sections: [
-      { type: 'text', content: 'Ağır hasar süreçlerinin current state analizini ve solution design dokümantasyonunu oluşturdum. Ayrıca test ortamlarında anonim veri yaratma sürecinin POC analizlerini gerçekleştirerek diğer ekiplere yol haritası sundum.' },
-      { type: 'svg', content: `<svg viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans,sans-serif">
-      <rect x="15" y="25" width="290" height="72" rx="4" fill="#e8e0d4" stroke="#b5472a66" stroke-width="1.5"/>
-      <text x="160" y="48" text-anchor="middle" fill="#6b6560" font-size="10">BPMN — Ağır Hasar Süreci</text>
-      <line x1="30" y1="58" x2="288" y2="58" stroke="#b5472a15" stroke-width="1"/>
-      <circle cx="55" cy="78" r="10" fill="none" stroke="#b5472a66" stroke-width="1.5"/>
-      <line x1="65" y1="78" x2="100" y2="78" stroke="#b5472a44" stroke-width="1.5"/>
-      <rect x="100" y="68" width="42" height="20" rx="3" fill="#f0ebe3" stroke="#b5472a44" stroke-width="1.2"/>
-      <text x="121" y="82" text-anchor="middle" fill="#8b3520" font-size="9">Analiz</text>
-      <line x1="142" y1="78" x2="178" y2="78" stroke="#b5472a44" stroke-width="1.5"/>
-      <rect x="178" y="68" width="42" height="20" rx="3" fill="#f0ebe3" stroke="#b5472a44" stroke-width="1.2"/>
-      <text x="199" y="82" text-anchor="middle" fill="#8b3520" font-size="9">Design</text>
-      <line x1="220" y1="78" x2="255" y2="78" stroke="#b5472a44" stroke-width="1.5"/>
-      <circle cx="268" cy="78" r="10" fill="none" stroke="#4caf7d88" stroke-width="2"/>
-      <circle cx="268" cy="78" r="6" fill="#2a7a5633"/>
-      <rect x="15" y="118" width="290" height="62" rx="4" fill="#e8e0d4" stroke="#c9a84c66" stroke-width="1.5"/>
-      <text x="160" y="138" text-anchor="middle" fill="#6b6560" font-size="10">Test Ortamı Anonimleştirme POC</text>
-      <line x1="30" y1="148" x2="288" y2="148" stroke="#b5472a15" stroke-width="1"/>
-      <text x="82" y="167" text-anchor="middle" fill="#8b3520" font-size="10">Gerçek Veri</text>
-      <line x1="120" y1="165" x2="162" y2="165" stroke="#b5472a44" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <polygon points="162,160 174,165 162,170" fill="#b5472a44"/>
-      <text x="220" y="167" text-anchor="middle" fill="#b5472a" font-size="10">Anonim Veri</text>
-      <line x1="305" y1="62" x2="356" y2="62" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <line x1="305" y1="149" x2="356" y2="149" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <rect x="356" y="38" width="136" height="134" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="424" y="64" text-anchor="middle" fill="#6b6560" font-size="10">Çıktılar</text>
-      <line x1="370" y1="74" x2="478" y2="74" stroke="#b5472a15" stroke-width="1"/>
-      <text x="424" y="92" text-anchor="middle" fill="#b5472a" font-size="10">Solution Design</text>
-      <text x="424" y="108" text-anchor="middle" fill="#6b6560" font-size="9">Dokümantasyon</text>
-      <text x="424" y="126" text-anchor="middle" fill="#b5472a" font-size="10">POC Raporu</text>
-      <text x="424" y="142" text-anchor="middle" fill="#6b6560" font-size="9">Ekip Yönlendirme</text>
-      <text x="424" y="158" text-anchor="middle" fill="#6b6560" font-size="9">Yol Haritası</text>
-    </svg>` },
-      { type: 'bottomText', content: 'POC sonuçları farklı ekiplere sunuldu; anonimleştirme süreci için tercih edilen araç ve yöntem belirlendi, teknik rehber dokümantasyonu hazırlandı.' },
-      { type: 'image', content: 'images/ts-bpmn.png' }
+      { type: 'text', content: `Hasar sürecinin analizinde, test ve preprod deployment öncesinde yer aldım. Süreç analizi sırasında karşılaştığım temel zorluk, sistemin komple otomasyon yapılmasındaki teknik engellerdi: biçimsiz evraklar, sözlü iş kurallarının tespiti ve hukuki belirsizlikler. Bu zorluklar süreç tasarımını sürekli değiştiriyor, yeni workaround çözümleri bulmayı gerektiriyordu — yorucu bir süreç olsa da çok değerli bir öğrenme deneyimi sağladı.` },
+      
+      { type: 'svg', content: 'diagrams/BPM-diagram.svg' },
+      
+      { type: 'text', content: `<h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px; margin-top: 24px;">BPMN & Süreç Orkestrasyon Yaklaşımı</h4>
+      <p style="color: #6b6560; line-height: 1.75;">BPMN hem süreci görsel bir dile dönüştürür hem de bu görsel dil deployment da korunur. Know how bilgisi iyi saklanır. Uzun iş kuralları yönetilebilir bir yapı kazanmış olur.</p>` },
+      
+      { type: 'text', content: `<div style="margin: 24px 0;">
+      <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Pratikte Ne Anlama Gelir?</h4>
+      <p style="color: #6b6560; line-height: 1.75; margin-bottom: 16px;">Hasar süreçlerini az hasarlı, ağır hasarlı, filo hasarlı olarak segmentlere ayırdığınızda her segment farklı bir akış izler. Az hasarlı dosya otomatik kapanırken ağır hasarlıya hukuki inceleme eklenir, filo hasarlıya özel SLA saatleri işler. Bu ayrımı core sisteme yazdırmak yerine BPMN katmanında tanımladığınızda, bir segment kuralı değiştiğinde sadece süreci güncelliyorsunuz; core sisteme dokunmuyorsunuz.</p>
+      </div>` },
+      
+      { type: 'text', content: `<div style="margin: 24px 0;">
+      <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Entegrasyon Boyutu</h4>
+      <p style="color: #6b6560; line-height: 1.75;">BPMN katmanı aynı zamanda bir orkestrasyon katmanı işlevi görür. Core sistem, belge yönetimi, ödeme sistemi, bildirim servisi — bunların her biri kendi işini yapar. BPMN hangi servisin ne zaman tetikleneceğini yönetir. Yarın ödeme sistemi değişse sadece o servis bağlantısı güncellenir, sürecin geri kalanı etkilenmez.</p>
+      </div>` },
+      
+      { type: 'bottomText', content: `<div style="margin: 24px 0; padding: 16px; background: #f0ebe3; border-left: 3px solid #b5472a; border-radius: 4px;">
+      <p style="color: #6b6560; line-height: 1.75; margin: 0;"><strong style="color: #b5472a;">Sonuç olarak:</strong> Bu mimari; iş kurallarını görünür ve düzenlenebilir kılar, segment bazlı SLA takibini mümkün kılar, darboğazların nerede oluştuğunu gösterir ve sistemler arası bağımlılığı yönetilebilir hale getirir.</p>
+      </div>` }
     ]
   },
   'interest-agile': {

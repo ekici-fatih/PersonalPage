@@ -207,7 +207,60 @@
     text-transform: uppercase;
     color: rgba(201,168,76,0.4);
   }
-  .modal-diagram svg { width: 100%; max-width: 700px; display: block; margin: 0 auto; }
+  .modal-diagram svg { width: 100%; max-width: 700px; display: block; margin: 0 auto; cursor: pointer; transition: opacity 0.2s; }
+  .modal-diagram svg:hover { opacity: 0.8; }
+  .svg-object { width: 100%; max-width: 700px; display: block; margin: 0 auto; height: auto; cursor: pointer; }
+
+  /* SVG Fullscreen Modal */
+  .svg-fullscreen-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .svg-fullscreen-overlay.open { opacity: 1; pointer-events: all; }
+  .svg-fullscreen-container {
+    background: var(--card);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 92vw;
+    max-height: 92vh;
+    overflow: auto;
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+  .svg-fullscreen-overlay.open .svg-fullscreen-container { transform: scale(1); }
+  .svg-fullscreen-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 20px;
+    transition: all 0.2s;
+    z-index: 10;
+  }
+  .svg-fullscreen-close:hover { border-color: var(--gold); color: var(--gold); }
+  .svg-fullscreen-container svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
   .modal-bottom-text { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
 
@@ -389,44 +442,7 @@
   }
   .photo-remove:hover { border-color: #e05c5c; color: #e05c5c; }
 
-  /* SVG ZOOM OVERLAY */
-  .svg-zoom-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(247,243,238,0.96);
-    z-index: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-    cursor: zoom-out;
-    padding: 40px;
-  }
-  .svg-zoom-overlay.open { opacity: 1; pointer-events: all; }
-  .svg-zoom-overlay img,
-  .svg-zoom-overlay svg {
-    max-width: 90vw;
-    max-height: 88vh;
-    border-radius: 6px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.15);
-  }
-  .svg-zoom-close {
-    position: fixed;
-    top: 20px; right: 24px;
-    background: white;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    cursor: pointer;
-    font-size: 18px;
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    transition: all 0.2s;
-    z-index: 501;
-  }
-  .svg-zoom-close:hover { border-color: var(--gold); color: var(--gold); }
+  /* ===== MOBİL UYUM ===== */
   @media (max-width: 768px) {
 
     body { overflow-y: auto; height: auto; min-height: 100vh; }
@@ -491,13 +507,15 @@
     .modal-close { top: 14px; right: 14px; }
     .modal-diagram { padding: 24px 8px 16px; overflow-x: auto; }
     .modal-diagram svg { min-width: 480px; }
+    .svg-object { min-width: 480px; }
+    .svg-fullscreen-container { padding: 12px; max-width: 96vw; max-height: 96vh; }
 
     /* Skills row */
     .skills-row { gap: 6px; margin-top: 18px; }
     .skill-tag { font-size: 10px; padding: 4px 10px; }
 
     /* İlgi alanları slide */
-    #slide-2 .company-slide { padding: 0 4px; }
+    #slide-3 .company-slide { padding: 0 4px; }
   }
 
   @media (max-width: 420px) {
@@ -528,7 +546,8 @@
         </div>
         <div class="about-text-area" style="opacity:0;animation:fadeUp 0.7s 0.4s forwards;">
           <div class="about-static-text">
-            İstatistik geçmişimden gelen analitik bakışla 5 yıldır geliştirme ve otomasyon projelerinin içindeyim. Karmaşık süreçleri hem kendim hem de çevremdekiler için görünür ve anlaşılır kılmak temel motivasyonum. İşin dışında kaya tırmanışı ve diğer sporları yapmaktan keyif almaktayım.          </div>
+            İstatistik geçmişimden gelen analitik bakış açısını, sigorta sektöründeki saha deneyimimle birleştiriyorum. Karmaşık sistemleri anlamak, süreci netleştirmek ve doğru soruyu sormak benim için bir alışkanlık hâline geldi.
+          </div>
         </div>
         <div class="about-tags" style="opacity:0;animation:fadeUp 0.7s 0.55s forwards;">
           <span class="stag stag-blue">İş Analizi</span>
@@ -546,9 +565,10 @@
     </div>
   </div>
 
-  <!-- Slide 1, 2: data.js'den render edilir -->
+  <!-- Slide 1, 2, 3: data.js'den render edilir -->
   <div class="slide" id="slide-1"></div>
   <div class="slide" id="slide-2"></div>
+  <div class="slide" id="slide-3"></div>
 </div>
 
 <!-- MODAL -->
@@ -559,17 +579,18 @@
   </div>
 </div>
 
+<!-- SVG FULLSCREEN MODAL -->
+<div class="svg-fullscreen-overlay" id="svg-fullscreen-overlay" onclick="closeSvgFullscreen(event)">
+  <div class="svg-fullscreen-container" id="svg-fullscreen-container">
+    <button class="svg-fullscreen-close" onclick="closeSvgFullscreen()">&#x2715;</button>
+  </div>
+</div>
+
 <!-- NAV -->
 <div class="nav">
   <button class="nav-btn" onclick="goTo(current-1)">&#8592;</button>
   <div class="nav-dots" id="dots"></div>
   <button class="nav-btn" onclick="goTo(current+1)">&#8594;</button>
-</div>
-
-<!-- SVG ZOOM OVERLAY -->
-<div class="svg-zoom-overlay" id="svg-zoom-overlay" onclick="closeSvgZoom()">
-  <button class="svg-zoom-close" onclick="closeSvgZoom()">&#x2715;</button>
-  <div id="svg-zoom-content"></div>
 </div>
 
 <script src="data.js"></script>
@@ -624,6 +645,27 @@ slidesMeta.slice(1).forEach(meta => {
 
 // ── MEVCUT JS ────────────────────────────────────────────────
 ;
+
+// SVG Fullscreen Functions
+function openSvgFullscreen(svgPath) {
+  const container = document.getElementById('svg-fullscreen-container');
+  fetch(svgPath)
+    .then(r => r.text())
+    .then(svgContent => {
+      const closeBtn = container.querySelector('.svg-fullscreen-close');
+      container.innerHTML = svgContent + '<button class="svg-fullscreen-close" onclick="closeSvgFullscreen()">&#x2715;</button>';
+    })
+    .catch(() => {
+      container.innerHTML = '<p style="color: #6b6560; padding: 20px;">Diyagram yüklenemedi.</p><button class="svg-fullscreen-close" onclick="closeSvgFullscreen()">&#x2715;</button>';
+    });
+  document.getElementById('svg-fullscreen-overlay').classList.add('open');
+}
+
+function closeSvgFullscreen(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById('svg-fullscreen-overlay').classList.remove('open');
+}
+
 function renderSection(s, title) {
   switch (s.type) {
     case 'text':
@@ -631,18 +673,25 @@ function renderSection(s, title) {
     case 'bottomText':
       return '<div class="modal-bottom-text">' + s.content + '</div>';
     case 'svg':
-      const isSvgFile = s.content.trim().endsWith('.svg');
-      const svgHtml = isSvgFile
-        ? `<img src="${s.content}" alt="diyagram" onclick="openSvgZoom(this.src, null)" style="width:100%;border-radius:4px;cursor:zoom-in;">`
-        : `<div onclick="openSvgZoom(null, this)" style="cursor:zoom-in;">${s.content}</div>`;
-      return `<div class="modal-diagram"><div class="modal-diagram-label">AKIŞ DİYAGRAMI</div>${svgHtml}</div>`;
+      // SVG dosyası mı yoksa inline SVG mi kontrol et
+      if (s.content.endsWith('.svg')) {
+        // SVG dosyası — click ile fullscreen açılacak
+        const svgPath = s.content;
+        return `<div class="modal-diagram">
+          <div class="modal-diagram-label">AKIŞ DİYAGRAMI</div>
+          <div style="cursor: pointer; text-align: center; padding: 20px; border-radius: 4px; background: rgba(181,71,42,0.03);" onclick="openSvgFullscreen('${svgPath}')">
+            <object data="${svgPath}" type="image/svg+xml" style="width: 100%; max-width: 600px; display: block; margin: 0 auto; pointer-events: none;"></object>
+          </div>
+        </div>`;
+      } else {
+        // Inline SVG
+        return '<div class="modal-diagram"><div class="modal-diagram-label">AKIŞ DİYAGRAMI</div>' + s.content + '</div>';
+      }
     case 'image':
       return `<div class="modal-img-section">
         <div class="modal-img-label">EKRAN GÖRÜNTÜSÜ / GÖRSEL</div>
         <div class="img-preview-wrap">
           <img src="${s.content}" alt="${title}"
-               onclick="openSvgZoom(this.src, null)"
-               style="cursor:zoom-in;"
                onerror="this.parentElement.style.display='none'">
         </div>
       </div>`;
@@ -696,7 +745,12 @@ function handleOverlayClick(e) {
   if (e.target === document.getElementById('modal-overlay')) closeModal();
 }
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeModal();
+    closeSvgFullscreen();
+  }
+});
 
 
 // CV handling
@@ -800,27 +854,6 @@ document.addEventListener('touchend', e => {
   const dx = e.changedTouches[0].clientX - tx;
   if (Math.abs(dx) > 50) dx < 0 ? goTo(current + 1) : goTo(current - 1);
 });
-
-function openSvgZoom(src, el) {
-  const container = document.getElementById('svg-zoom-content');
-  if (src) {
-    container.innerHTML = `<img src="${src}" alt="diyagram">`;
-  } else if (el) {
-    container.innerHTML = el.innerHTML;
-  }
-  document.getElementById('svg-zoom-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeSvgZoom() {
-  document.getElementById('svg-zoom-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeSvgZoom();
-});
-
 </script>
 </body>
 </html>

@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1720 520" width="1720" height="520" font-family="Georgia, serif">
+  <style>
+    .ant-gray   { stroke-dasharray: 6; stroke-dashoffset: 12; animation: march 0.6s linear infinite; }
+    .ant-green  { stroke-dasharray: 6; stroke-dashoffset: 12; animation: march 0.5s linear infinite; }
+    .ant-red    { stroke-dasharray: 6; stroke-dashoffset: 12; animation: march 0.7s linear infinite; }
+    .ant-orange { stroke-dasharray: 6; stroke-dashoffset: 12; animation: march 0.65s linear infinite; }
+    .ant-dashed { stroke-dasharray: 4 3; stroke-dashoffset: 14; animation: march 0.8s linear infinite; }
+    @keyframes march { to { stroke-dashoffset: 0; } }
+  </style>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6b6b6b"/>
+    </marker>
+    <marker id="arr-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+    <marker id="arr-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e67e22"/>
+    </marker>
+    <filter id="sh" x="-5%" y="-5%" width="115%" height="125%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#00000015"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1720" height="520" fill="#f7f5f0"/>
+
+  <!-- ══ HEADER ══ -->
+  <text x="860" y="26" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c2c2c" letter-spacing="1">HASAR DOSYASI — BPM SÜREÇ AKIŞ DİYAGRAMI</text>
+  <text x="860" y="40" text-anchor="middle" font-size="9" fill="#999" letter-spacing="2">HASAR YÖNETİMİ · BPM ENTEGRASYONU · UiPath OCR</text>
+  <rect x="634" y="47" width="54" height="15" rx="7" fill="#eee" stroke="#ccc" stroke-width="0.7"/>
+  <text x="661" y="58" text-anchor="middle" font-size="7" fill="#555">REST API</text>
+  <rect x="694" y="47" width="42" height="15" rx="7" fill="#eee" stroke="#ccc" stroke-width="0.7"/>
+  <text x="715" y="58" text-anchor="middle" font-size="7" fill="#555">BPM</text>
+  <rect x="742" y="47" width="52" height="15" rx="7" fill="#eee" stroke="#ccc" stroke-width="0.7"/>
+  <text x="768" y="58" text-anchor="middle" font-size="7" fill="#555">UiPath</text>
+  <rect x="800" y="47" width="80" height="15" rx="7" fill="#eee" stroke="#ccc" stroke-width="0.7"/>
+  <text x="840" y="58" text-anchor="middle" font-size="7" fill="#555">Evrak Otomasyonu</text>
+  <rect x="886" y="47" width="80" height="15" rx="7" fill="#eee" stroke="#ccc" stroke-width="0.7"/>
+  <text x="926" y="58" text-anchor="middle" font-size="7" fill="#555">Süreç Orkestrasyon</text>
+  <line x1="40" y1="70" x2="1680" y2="70" stroke="#ddd" stroke-width="0.5"/>
+
+  <!-- ══ N1: Tetikleyici (Start) x=40 w=130 cx=105 ══ -->
+  <rect x="40" y="168" width="130" height="64" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="105" y="191" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c2c2c">Tetikleyici</text>
+  <text x="105" y="205" text-anchor="middle" font-size="8" fill="#888">Dosya açılışı</text>
+  <text x="105" y="218" text-anchor="middle" font-size="8" fill="#888">veya belirlenen an</text>
+  <!-- start circle indicator -->
+  <circle cx="61" cy="176" r="5" fill="none" stroke="#27ae60" stroke-width="1.5"/>
+  <circle cx="61" cy="176" r="2.5" fill="#27ae60"/>
+  <line x1="170" y1="200" x2="202" y2="200" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N2: BPM Mesaj Alımı x=202 w=140 cx=272 ══ -->
+  <rect x="202" y="155" width="140" height="90" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="202" y="155" width="140" height="18" rx="6" fill="#e8e3d8"/>
+  <rect x="202" y="165" width="140" height="8" fill="#e8e3d8"/>
+  <text x="272" y="167" text-anchor="middle" font-size="8" font-weight="bold" fill="#2c2c2c">BPM Mesaj Alımı</text>
+  <text x="272" y="185" text-anchor="middle" font-size="7.5" fill="#888">Sisteme mesaj iletilir</text>
+  <text x="272" y="198" text-anchor="middle" font-size="7.5" fill="#888">Dosya sürece katılır</text>
+  <text x="272" y="211" text-anchor="middle" font-size="7" fill="#aaa">Orkestrasyon başlar</text>
+  <text x="272" y="237" text-anchor="middle" font-size="7" fill="#aaa"> </text>
+  <line x1="342" y1="200" x2="374" y2="200" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N3: İş Kuralları Kontrolü x=374 w=162 cx=455 ══ -->
+  <rect x="374" y="128" width="162" height="164" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="374" y="128" width="162" height="18" rx="6" fill="#e8e3d8"/>
+  <rect x="374" y="138" width="162" height="8" fill="#e8e3d8"/>
+  <text x="455" y="140" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">İş Kuralları Kontrolü</text>
+  <text x="384" y="162" font-size="7.5" fill="#555">• Poliçe geçerlilik kontrolü</text>
+  <text x="384" y="175" font-size="7.5" fill="#555">• Hasar tipi doğrulaması</text>
+  <text x="384" y="188" font-size="7.5" fill="#555">• Zorunlu alan kontrolü</text>
+  <text x="384" y="201" font-size="7.5" fill="#2c2c2c">• Süreç tipi tespiti ★</text>
+  <text x="384" y="214" font-size="7" fill="#aaa">  Az / Ağır / Filo hasarlı</text>
+  <text x="384" y="228" font-size="7.5" fill="#555">• Limit ve kapsam kontrolü</text>
+  <text x="384" y="241" font-size="7" fill="#aaa">Kural ihlalinde uzman atama</text>
+  <!-- fail drop -->
+  <line x1="455" y1="292" x2="455" y2="340" stroke="#c0392b" stroke-width="1.1" marker-end="url(#arr-red)" class="ant-red"/>
+  <text x="461" y="320" font-size="7.5" fill="#c0392b">Kural ihlali</text>
+  <rect x="374" y="340" width="162" height="52" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="1.1" filter="url(#sh)"/>
+  <text x="455" y="358" text-anchor="middle" font-size="8.5" fill="#c0392b" font-weight="bold">Uzman Atama</text>
+  <text x="384" y="373" font-size="7.5" fill="#c0392b">Sigorta uzmanına yönlendir</text>
+  <text x="384" y="385" font-size="7" fill="#aaa">Manuel inceleme başlar</text>
+  <!-- N3→N4 -->
+  <line x1="536" y1="200" x2="568" y2="200" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N4: Süreç Yönlendirme x=568 w=160 cx=648 ══ -->
+  <rect x="568" y="108" width="160" height="202" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="568" y="108" width="160" height="18" rx="6" fill="#e8e3d8"/>
+  <rect x="568" y="118" width="160" height="8" fill="#e8e3d8"/>
+  <text x="648" y="120" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">Süreç Yönlendirme</text>
+  <rect x="576" y="132" width="144" height="36" rx="4" fill="#edf7ed" stroke="#a8d5a2" stroke-width="0.8"/>
+  <text x="584" y="146" font-size="7.5" fill="#27ae60" font-weight="bold">Az Hasarlı →</text>
+  <text x="584" y="160" font-size="7.5" fill="#2c2c2c">Otomatik akış, hızlı kapanış</text>
+  <rect x="576" y="174" width="144" height="36" rx="4" fill="#edf7ed" stroke="#a8d5a2" stroke-width="0.8"/>
+  <text x="584" y="188" font-size="7.5" fill="#27ae60" font-weight="bold">Ağır Hasarlı →</text>
+  <text x="584" y="202" font-size="7.5" fill="#2c2c2c">Eksper + hukuki inceleme</text>
+  <rect x="576" y="216" width="144" height="36" rx="4" fill="#fff8e1" stroke="#f0c040" stroke-width="0.8"/>
+  <text x="584" y="230" font-size="7.5" fill="#e67e22" font-weight="bold">Filo Hasarlı →</text>
+  <text x="584" y="244" font-size="7.5" fill="#2c2c2c">Özel SLA ve toplu işlem</text>
+  <rect x="576" y="258" width="144" height="36" rx="4" fill="#fdecea" stroke="#e0a0a0" stroke-width="0.8"/>
+  <text x="584" y="272" font-size="7.5" fill="#c0392b" font-weight="bold">Hata Durumu →</text>
+  <text x="584" y="286" font-size="7.5" fill="#2c2c2c">Uzman devreye girer</text>
+  <!-- N4→N5 -->
+  <line x1="728" y1="200" x2="760" y2="200" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N5: Evrak Otomasyonu x=760 w=150 cx=835 ══ -->
+  <rect x="760" y="155" width="150" height="90" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="760" y="155" width="150" height="18" rx="6" fill="#e8e3d8"/>
+  <rect x="760" y="165" width="150" height="8" fill="#e8e3d8"/>
+  <text x="835" y="167" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">Evrak Otomasyonu</text>
+  <text x="770" y="185" font-size="7.5" fill="#555">Evrak sistemi tetiklenir</text>
+  <text x="770" y="198" font-size="7.5" fill="#555">Dosyaya eklenen evraklar</text>
+  <text x="770" y="211" font-size="7.5" fill="#555">sıraya alınır</text>
+  <text x="770" y="237" font-size="7" fill="#aaa"> </text>
+  <line x1="910" y1="200" x2="942" y2="200" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N6: UiPath OCR x=942 w=162 cx=1023 ══ -->
+  <rect x="942" y="128" width="162" height="154" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="942" y="128" width="162" height="18" rx="6" fill="#e8e3d8"/>
+  <rect x="942" y="138" width="162" height="8" fill="#e8e3d8"/>
+  <text x="1023" y="140" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">UiPath OCR Servisi</text>
+  <text x="952" y="160" font-size="7.5" fill="#555">• Fatura okuma</text>
+  <text x="952" y="173" font-size="7.5" fill="#555">• Kimlik doğrulama</text>
+  <text x="952" y="186" font-size="7.5" fill="#555">• Tutanak analizi</text>
+  <text x="952" y="199" font-size="7.5" fill="#2c2c2c">• Evrak sınıflandırma ★</text>
+  <text x="952" y="212" font-size="7" fill="#aaa">Otomatik veri çıkarımı</text>
+  <text x="952" y="225" font-size="7" fill="#aaa">Eksik/hatalı evrak tespiti</text>
+  <!-- fail drop -->
+  <line x1="1023" y1="282" x2="1023" y2="330" stroke="#c0392b" stroke-width="1.1" marker-end="url(#arr-red)" class="ant-red"/>
+  <text x="1029" y="310" font-size="7.5" fill="#c0392b">Evrak hatası</text>
+  <rect x="942" y="330" width="162" height="52" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="1.1" filter="url(#sh)"/>
+  <text x="1023" y="348" text-anchor="middle" font-size="8.5" fill="#c0392b" font-weight="bold">Uzman Atama</text>
+  <text x="952" y="363" font-size="7.5" fill="#c0392b">Eksik/hatalı evrak bildirimi</text>
+  <text x="952" y="375" font-size="7" fill="#aaa">Manuel kontrol gerekli</text>
+  <!-- N6→N7 -->
+  <line x1="1104" y1="200" x2="1136" y2="200" stroke="#27ae60" stroke-width="1.3" marker-end="url(#arr-green)" class="ant-green"/>
+  <text x="1112" y="194" font-size="7.5" fill="#27ae60">Başarılı</text>
+
+  <!-- ══ N7: Süreç Geçişi Kontrolü x=1136 w=162 cx=1217 ══ -->
+  <rect x="1136" y="128" width="162" height="132" rx="6" fill="#fff" stroke="#bbb" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="1136" y="128" width="162" height="18" rx="6" fill="#e8e3d8"/>
+  <rect x="1136" y="138" width="162" height="8" fill="#e8e3d8"/>
+  <text x="1217" y="140" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">Süreç Geçiş Kontrolü</text>
+  <text x="1146" y="160" font-size="7.5" fill="#555">Süreç tipi yeniden değerlenir</text>
+  <text x="1146" y="173" font-size="7.5" fill="#2c2c2c">Az → Ağır geçiş mümkün ★</text>
+  <text x="1146" y="186" font-size="7.5" fill="#555">Yeni evrak bilgisiyle karar</text>
+  <text x="1146" y="199" font-size="7" fill="#aaa">BPM token güncellenir</text>
+  <text x="1146" y="213" font-size="7" fill="#aaa">Uygun akışa yönlendirilir</text>
+  <!-- N7→N8 -->
+  <line x1="1298" y1="200" x2="1330" y2="200" stroke="#27ae60" stroke-width="1.3" marker-end="url(#arr-green)" class="ant-green"/>
+
+  <!-- ══ N8: Ödeme Kararı x=1330 w=162 cx=1411 ══ -->
+  <rect x="1330" y="128" width="162" height="132" rx="6" fill="#fff" stroke="#4ade80" stroke-width="1.2" filter="url(#sh)"/>
+  <rect x="1330" y="128" width="162" height="18" rx="6" fill="#d5e8d4"/>
+  <rect x="1330" y="138" width="162" height="8" fill="#d5e8d4"/>
+  <text x="1411" y="140" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2c2c2c">Ödeme Kararı</text>
+  <text x="1340" y="160" font-size="7.5" fill="#555">Süreç tipine göre değerlenir</text>
+  <text x="1340" y="173" font-size="7.5" fill="#27ae60">• Ödeme gerçekleşir</text>
+  <text x="1340" y="186" font-size="7.5" fill="#c0392b">• Ödeme gerçekleşmez</text>
+  <text x="1340" y="199" font-size="7" fill="#aaa">Onay akışı tamamlanır</text>
+  <text x="1340" y="213" font-size="7" fill="#aaa">Core sisteme bildirim</text>
+  <!-- N8→N9 -->
+  <line x1="1492" y1="200" x2="1524" y2="200" stroke="#6b6b6b" stroke-width="1.3" marker-end="url(#arr)" class="ant-gray"/>
+
+  <!-- ══ N9: Süreç Sonu x=1524 w=140 cx=1594 ══ -->
+  <rect x="1524" y="168" width="140" height="64" rx="6" fill="#fff" stroke="#4ade80" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="1594" y="191" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c2c2c">Dosya Kapanışı</text>
+  <text x="1594" y="205" text-anchor="middle" font-size="8" fill="#888">Core sisteme yazım</text>
+  <text x="1594" y="218" text-anchor="middle" font-size="8" fill="#888">Süreç sonlandırılır</text>
+  <!-- end circle indicator -->
+  <circle cx="1655" cy="176" r="6" fill="none" stroke="#27ae60" stroke-width="2"/>
+  <circle cx="1655" cy="176" r="3.5" fill="#27ae60"/>
+
+  <!-- ══ UZMAN GERİ DÖNÜŞ OKLARI (alt bağlantı) ══ -->
+  <!-- İş kuralı uzman → süreç yönlendirmeye geri -->
+  <path d="M455,392 Q455,440 648,440 Q760,440 760,380" fill="none" stroke="#e67e22" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-orange)" class="ant-dashed"/>
+  <text x="600" y="452" text-anchor="middle" font-size="7.5" fill="#e67e22">Uzman müdahalesi → Süreç yeniden başlar</text>
+
+  <!-- Evrak hatası uzman → süreç geçiş kontrolüne geri -->
+  <path d="M1023,382 Q1023,460 1217,460 Q1298,460 1298,260" fill="none" stroke="#e67e22" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-orange)" class="ant-dashed"/>
+
+  <!-- ══ LEGEND ══ -->
+  <line x1="40" y1="490" x2="1680" y2="490" stroke="#ddd" stroke-width="0.5"/>
+  <rect x="460" y="500" width="12" height="12" rx="2" fill="#d5e8d4" stroke="#a8d5a2" stroke-width="0.8"/>
+  <text x="478" y="511" font-size="8" fill="#666">Başarılı akış</text>
+  <rect x="580" y="500" width="12" height="12" rx="2" fill="#fdecea" stroke="#e0a0a0" stroke-width="0.8"/>
+  <text x="598" y="511" font-size="8" fill="#666">Hata / Uzman Atama</text>
+  <rect x="730" y="500" width="12" height="12" rx="2" fill="#fff8e1" stroke="#f0c040" stroke-width="0.8"/>
+  <text x="748" y="511" font-size="8" fill="#666">Koşullu yönlendirme</text>
+  <rect x="900" y="500" width="12" height="12" rx="2" fill="#e8e3d8" stroke="#ccc" stroke-width="0.8"/>
+  <text x="918" y="511" font-size="8" fill="#666">Süreç / İşlem adımı</text>
+  <line x1="1060" y1="506" x2="1086" y2="506" stroke="#e67e22" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="1094" y="511" font-size="8" fill="#666">Geri dönüş / Süreç geçişi</text>
+</svg>
