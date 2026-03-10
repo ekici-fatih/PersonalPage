@@ -79,15 +79,11 @@ Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.`
       <ul style="list-style: none; margin: 0; padding: 0;">
         <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
           <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
-          Vade tespiti, kur yönetimi ve mükerrer tahsilat konularında hata toleransının sıfır olduğu iş kurallarını modelledim
+          Vade tespiti, kur yönetimi ve mükerrer tahsilat konularında hata toleransı düşük iş kuralları ve engelleri tanımlayarak sürecin güvenilirliğini sağladım.
         </li>
         <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
           <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
-          Karma test senaryoları için test verilerini script ile üreterek çoklu senaryoların tek seferde koşulabilmesini sağladım
-        </li>
-        <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
-          <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
-          Arka planda tetiklenen poliçe/zeyil işlemleri ve tahsilat sonrası alarm mekanizmalarını iş kuralları bazında tanımladım
+          Karma test senaryoları için test verilerini script ile üreterek farklı senaryoların test edilmesini sağladım
         </li>
       </ul>
     </div>`

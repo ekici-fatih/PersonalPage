@@ -415,14 +415,22 @@
   .photo-box {
     width: 220px;
     height: 260px;
-    border-radius: 6px;
+    border-radius: 16px;
     border: 1.5px solid rgba(181,71,42,0.25);
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.25), inset 0 0 40px rgba(181,71,42,0.1);
+  }
+  .photo-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.08) 100%);
+    pointer-events: none;
+    z-index: 1;
   }
   .photo-placeholder { display: flex; flex-direction: column; align-items: center; gap: 10px; pointer-events: none; }
   .photo-icon { font-size: 36px; opacity: 0.3; }
