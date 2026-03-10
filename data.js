@@ -32,9 +32,7 @@ const slidesMeta = [
       { id: 'az-1', num: '01', title: 'Mobil 3D Tahsilat entegrasyonu', desc: 'Mevcut sistemlerin yeni ürün yapılarına uyarlanması ve geçiş süreçlerinin yönetimi' },
       { id: 'ts-sbm', num:'02',     icon: '🔗', title: 'SBM Veri Entegrasyonu & Mutabakat Sistemi',           desc: 'Sektör veri standardizasyonu ve SBM entegrasyonu' },
       { id: 'ts-chatbot', num:'03', icon: '🤖', title: 'Chatbot & AI Asistan',            desc: 'Müşteri hizmetleri için yapay zeka tabanlı chatbot geliştirme' },
-      { id: 'ts-btrans',  num:'04',  icon: '🔄', title: 'BTrans Veri Paylaşımı Modernizasyonu',     desc: 'Veri aktarım uygulamasının modernizasyonu ve online sisteme geçişi' },
-      { id: 'ts-bpmn',    num:'05',    icon: '📋', title: 'BPMN Süreç Modelleme',            desc: 'İş süreçlerinin BPMN ile modellenmesi' },
-       { id: 'ts-aml', num:'06',     icon: '🛡️', title: 'AML & Kara Liste Sistemleri',    desc: 'Kara liste entegrasyonu ve AML süreçlerinin analizi' },
+      { id: 'ts-bpmn',    num:'04',    icon: '📋', title: 'BPMN Süreç Modelleme',            desc: 'İş süreçlerinin BPMN ile modellenmesi' },
     ]
   },
   {
@@ -135,41 +133,6 @@ Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.`
 ]
 
 
-  },
-  'ts-aml': {
-    tag: '',
-    title: 'AML & Kara Liste Sistemleri',
-    stack: ['PL/SQL', 'Oracle', 'Java', 'AML Mevzuatı', 'Bakım & Geliştirme'],
-    sections: [
-      { type: 'text', content: 'Kara liste ve AML ekranlarının bakım süreçlerini yürüttüm; mevzuat güncellemelerine göre sistem uyarlamalarını gerçekleştirdim. Şüpheli işlem tespiti için sorgu optimizasyonları ve ekran geliştirmeleri yapıldı.' },
-      { type: 'svg', content: `<svg viewBox="0 0 640 180" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans,sans-serif">
-      <rect x="15" y="60" width="120" height="65" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="75" y="88" text-anchor="middle" fill="#6b6560" font-size="10">Müşteri</text>
-      <text x="75" y="104" text-anchor="middle" fill="#b5472a" font-size="11">Verisi</text>
-      <line x1="135" y1="93" x2="190" y2="93" stroke="#b5472a44" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <polygon points="190,88 202,93 190,98" fill="#b5472a44"/>
-      <rect x="202" y="42" width="164" height="102" rx="4" fill="#e8e0d4" stroke="#b5472a66" stroke-width="1.5"/>
-      <text x="284" y="68" text-anchor="middle" fill="#6b6560" font-size="10">Tarama Motoru</text>
-      <line x1="216" y1="78" x2="352" y2="78" stroke="#b5472a15" stroke-width="1"/>
-      <text x="284" y="96" text-anchor="middle" fill="#8b3520" font-size="11">AML Kontrolü</text>
-      <text x="284" y="112" text-anchor="middle" fill="#6b6560" font-size="10">Kara Liste Eşleşme</text>
-      <text x="284" y="128" text-anchor="middle" fill="#6b6560" font-size="9">Şüpheli İşlem Tespiti</text>
-      <line x1="366" y1="78" x2="418" y2="58" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <line x1="366" y1="112" x2="418" y2="135" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <rect x="418" y="38" width="116" height="40" rx="4" fill="#f0ebe3" stroke="#2a7a5644" stroke-width="1.5"/>
-      <text x="476" y="57" text-anchor="middle" fill="#2a7a56" font-size="10">✓ Temiz</text>
-      <text x="476" y="72" text-anchor="middle" fill="#6b6560" font-size="9">Onay</text>
-      <rect x="418" y="116" width="116" height="40" rx="4" fill="#f0ebe3" stroke="#c0392b44" stroke-width="1.5"/>
-      <text x="476" y="135" text-anchor="middle" fill="#c0392b" font-size="10">✗ Eşleşme</text>
-      <text x="476" y="150" text-anchor="middle" fill="#6b6560" font-size="9">Uyarı / Blok</text>
-      <line x1="534" y1="58" x2="580" y2="80" stroke="#b5472a22" stroke-width="1"/>
-      <line x1="534" y1="136" x2="580" y2="110" stroke="#b5472a22" stroke-width="1"/>
-      <rect x="580" y="68" width="50" height="50" rx="4" fill="#f0ebe3" stroke="#b5472a15" stroke-width="1"/>
-      <text x="605" y="91" text-anchor="middle" fill="#6b6560" font-size="9">Rapor</text>
-      <text x="605" y="106" text-anchor="middle" fill="#6b6560" font-size="9">& Log</text>
-    </svg>` },
-      { type: 'bottomText', content: 'Mevzuat değişikliklerine paralel kara liste güncelleme süreçleri optimize edildi; yeni ekran bileşenleri kullanıcı geri bildirimleriyle şekillendirildi.' }
-    ]
   },
   'ts-sbm': {
     tag: '',
@@ -340,44 +303,6 @@ Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.`
         </div>` 
       },
       { type: 'image', content: 'images/ts-chatbot.png' }
-    ]
-  },
-  'ts-btrans': {
-    tag: '',
-    title: 'BTrans Veri Paylaşımı Modernizasyonu',
-    stack: ['Sistem Analizi', 'Dokümantasyon', 'Süreç Modelleme', 'Java', 'Geçiş Planlaması'],
-    sections: [
-      { type: 'text', content: 'Desktop ortamda çalışan BTrans uygulamasının farklı makineye ve ardından online sisteme taşınması için gerekli sistem analizini yaptım. Mevcut iş akışlarını belgeledim, bağımlılık haritasını çıkardım ve geçiş planı dokümantasyonunu hazırladım.' },
-      { type: 'svg', content: `<svg viewBox="0 0 640 180" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans,sans-serif">
-      <rect x="15" y="50" width="128" height="90" rx="4" fill="#f0ebe3" stroke="#c0392b44" stroke-width="1.5"/>
-      <text x="79" y="82" text-anchor="middle" fill="#6b6560" font-size="10">Eski Desktop</text>
-      <text x="79" y="98" text-anchor="middle" fill="#c0392b" font-size="11">BTrans App</text>
-      <text x="79" y="114" text-anchor="middle" fill="#6b6560" font-size="9">Tek Makine</text>
-      <text x="79" y="129" text-anchor="middle" fill="#6b6560" font-size="9">Manuel Süreç</text>
-      <line x1="143" y1="95" x2="193" y2="95" stroke="#b5472a44" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <polygon points="193,90 205,95 193,100" fill="#b5472a44"/>
-      <rect x="205" y="46" width="148" height="96" rx="4" fill="#e8e0d4" stroke="#b5472a66" stroke-width="1.5"/>
-      <text x="279" y="72" text-anchor="middle" fill="#6b6560" font-size="10">Sistem Analizi</text>
-      <line x1="220" y1="82" x2="338" y2="82" stroke="#b5472a15" stroke-width="1"/>
-      <text x="279" y="98" text-anchor="middle" fill="#8b3520" font-size="10">İş Akışı Analizi</text>
-      <text x="279" y="114" text-anchor="middle" fill="#6b6560" font-size="9">Bağımlılık Haritası</text>
-      <text x="279" y="129" text-anchor="middle" fill="#6b6560" font-size="9">Geçiş Planı</text>
-      <line x1="353" y1="80" x2="403" y2="60" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <line x1="353" y1="112" x2="403" y2="135" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <rect x="403" y="40" width="114" height="44" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="460" y="60" text-anchor="middle" fill="#6b6560" font-size="9">Faz 1</text>
-      <text x="460" y="76" text-anchor="middle" fill="#b5472a" font-size="10">Farklı Makine</text>
-      <rect x="403" y="115" width="114" height="44" rx="4" fill="#e8e0d4" stroke="#b5472a66" stroke-width="1.5"/>
-      <text x="460" y="135" text-anchor="middle" fill="#6b6560" font-size="9">Faz 2</text>
-      <text x="460" y="151" text-anchor="middle" fill="#8b3520" font-size="10">Online Sistem</text>
-      <line x1="517" y1="62" x2="562" y2="84" stroke="#b5472a22" stroke-width="1"/>
-      <line x1="517" y1="137" x2="562" y2="110" stroke="#b5472a22" stroke-width="1"/>
-      <rect x="562" y="72" width="66" height="50" rx="4" fill="#f0ebe3" stroke="#2a7a5644" stroke-width="1"/>
-      <text x="595" y="95" text-anchor="middle" fill="#2a7a56" font-size="9">Modernize</text>
-      <text x="595" y="110" text-anchor="middle" fill="#6b6560" font-size="9">Sistem</text>
-    </svg>` },
-      { type: 'bottomText', content: 'Proje; mevcut durumu netleştiren kapsamlı bir current state dokümantasyonu ve faz bazlı geçiş planı ile sonuçlandı.' },
-      { type: 'image', content: 'images/ts-btrans.png' }
     ]
   },
   'ts-bpmn': {
