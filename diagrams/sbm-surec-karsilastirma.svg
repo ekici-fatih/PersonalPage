@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" width="900" height="760" font-family="'Segoe UI', Arial, sans-serif">
+
+  <defs>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#9e9790"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#b5472a"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4a7c59"/>
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000018"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="760" fill="#f9f7f4"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#1c1a18">SBM Tamlık Süreci — Yöntem Karşılaştırması</text>
+
+  <!-- Legend -->
+  <rect x="260" y="44" width="380" height="22" rx="6" fill="#f0eeeb" stroke="#ddd" stroke-width="1"/>
+  <rect x="272" y="50" width="10" height="10" rx="2" fill="#b5472a"/>
+  <text x="286" y="59" font-size="8" fill="#1c1a18">SBM</text>
+  <rect x="318" y="50" width="10" height="10" rx="2" fill="#2c5f8a"/>
+  <text x="332" y="59" font-size="8" fill="#1c1a18">Mevcut Sistem DB</text>
+  <rect x="428" y="50" width="10" height="10" rx="2" fill="#4a7c59"/>
+  <text x="442" y="59" font-size="8" fill="#1c1a18">Her ikisi (çapraz sorgu)</text>
+
+
+  <!-- ======= LEFT: ESKİ SÜREÇ ======= -->
+  <rect x="30" y="76" width="390" height="652" rx="14" fill="#fff" stroke="#ddd" stroke-width="1.2" filter="url(#shadow)"/>
+  <rect x="30" y="76" width="390" height="44" rx="14" fill="#6b6560"/>
+  <rect x="30" y="98" width="390" height="22" fill="#6b6560"/>
+  <text x="225" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">⚠ Eski Süreç</text>
+
+  <!-- Step 1 -->
+  <rect x="58" y="140" width="334" height="66" rx="8" fill="#f0eeeb" stroke="#ccc" stroke-width="1"/>
+  <circle cx="82" cy="173" r="13" fill="#6b6560"/>
+  <text x="82" y="178" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">1</text>
+  <text x="103" y="161" font-size="10" font-weight="600" fill="#1c1a18">SBM'den Tamlık Raporu</text>
+  <text x="103" y="175" font-size="9" fill="#6b6560">Tamlık raporu manuel olarak indirilir</text>
+  <rect x="270" y="152" width="36" height="14" rx="4" fill="#b5472a"/>
+  <text x="288" y="162" text-anchor="middle" font-size="7.5" font-weight="700" fill="#fff">SBM</text>
+  <text x="103" y="196" font-size="8" fill="#9e9790" font-style="italic">Kaynak: Yalnızca SBM portalı</text>
+
+  <line x1="225" y1="206" x2="225" y2="224" stroke="#9e9790" stroke-width="1.8" marker-end="url(#arrow-gray)"/>
+
+  <!-- Step 2 -->
+  <rect x="58" y="224" width="334" height="66" rx="8" fill="#f0eeeb" stroke="#ccc" stroke-width="1"/>
+  <circle cx="82" cy="257" r="13" fill="#6b6560"/>
+  <text x="82" y="262" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">2</text>
+  <text x="103" y="245" font-size="10" font-weight="600" fill="#1c1a18">Hatalı Dosyaları Çek</text>
+  <text x="103" y="259" font-size="9" fill="#6b6560">Eksik branşlara ait gönderim hataları tespit edilir</text>
+  <rect x="248" y="236" width="84" height="14" rx="4" fill="#2c5f8a"/>
+  <text x="290" y="246" text-anchor="middle" font-size="7.5" font-weight="700" fill="#fff">Mevcut Sistem</text>
+  <text x="103" y="280" font-size="8" fill="#9e9790" font-style="italic">Kaynak: Yalnızca mevcut sistem DB</text>
+
+  <line x1="225" y1="290" x2="225" y2="308" stroke="#9e9790" stroke-width="1.8" marker-end="url(#arrow-gray)"/>
+
+  <!-- Step 3 -->
+  <rect x="58" y="308" width="334" height="54" rx="8" fill="#f0eeeb" stroke="#ccc" stroke-width="1"/>
+  <circle cx="82" cy="335" r="13" fill="#6b6560"/>
+  <text x="82" y="340" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">3</text>
+  <text x="103" y="329" font-size="10" font-weight="600" fill="#1c1a18">Yeniden Gönder</text>
+  <text x="103" y="344" font-size="9" fill="#6b6560">Hatalı dosyalar tekrar gönderilir</text>
+
+  <line x1="225" y1="362" x2="225" y2="380" stroke="#9e9790" stroke-width="1.8" marker-end="url(#arrow-gray)"/>
+
+  <!-- Decision -->
+  <polygon points="225,380 372,434 225,488 78,434" fill="#ede8e3" stroke="#aaa" stroke-width="1.2"/>
+  <text x="225" y="428" text-anchor="middle" font-size="9" font-weight="600" fill="#1c1a18">Hata tekrar</text>
+  <text x="225" y="442" text-anchor="middle" font-size="9" font-weight="600" fill="#1c1a18">alındı mı?</text>
+
+  <line x1="372" y1="434" x2="394" y2="434" stroke="#9e9790" stroke-width="1.5"/>
+  <line x1="394" y1="434" x2="394" y2="524" stroke="#9e9790" stroke-width="1.5"/>
+  <line x1="394" y1="524" x2="374" y2="524" stroke="#9e9790" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+  <text x="399" y="482" font-size="8" fill="#b5472a">Evet</text>
+
+  <line x1="225" y1="488" x2="225" y2="506" stroke="#9e9790" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+  <text x="232" y="500" font-size="8" fill="#4a7c59">Hayır</text>
+
+  <!-- Step 5 -->
+  <rect x="58" y="506" width="334" height="54" rx="8" fill="#fce8e3" stroke="#b5472a" stroke-width="1"/>
+  <circle cx="82" cy="533" r="13" fill="#b5472a"/>
+  <text x="82" y="538" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">4</text>
+  <text x="103" y="527" font-size="10" font-weight="600" fill="#1c1a18">Sistem Geliştirmesi</text>
+  <text x="103" y="542" font-size="9" fill="#6b6560">Mümkünse geliştirme yapılır, değilse manuel devam</text>
+
+  <line x1="225" y1="560" x2="225" y2="578" stroke="#9e9790" stroke-width="1.8" marker-end="url(#arrow-gray)"/>
+
+  <rect x="150" y="578" width="150" height="36" rx="18" fill="#6b6560"/>
+  <text x="225" y="601" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Süreç Tamamlandı</text>
+
+  <rect x="58" y="630" width="334" height="46" rx="8" fill="#fff3f0" stroke="#b5472a" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="225" y="648" text-anchor="middle" font-size="9" fill="#b5472a" font-weight="600">⚠ Reaktif — Tek veri kaynağı</text>
+  <text x="225" y="662" text-anchor="middle" font-size="8.5" fill="#6b6560">SBM ve sistem ayrı ayrı, hata oluştuktan sonra müdahale</text>
+
+
+  <!-- ======= RIGHT: YENİ YÖNTEM ======= -->
+  <rect x="480" y="76" width="390" height="652" rx="14" fill="#fff" stroke="#ddd" stroke-width="1.2" filter="url(#shadow)"/>
+  <rect x="480" y="76" width="390" height="44" rx="14" fill="#b5472a"/>
+  <rect x="480" y="98" width="390" height="22" fill="#b5472a"/>
+  <text x="675" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">✓ Yeni Yöntem</text>
+
+  <!-- Step 1 -->
+  <rect x="508" y="140" width="334" height="66" rx="8" fill="#fdf5f3" stroke="#e8c4ba" stroke-width="1"/>
+  <circle cx="532" cy="173" r="13" fill="#b5472a"/>
+  <text x="532" y="178" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">1</text>
+  <text x="553" y="161" font-size="10" font-weight="600" fill="#1c1a18">Dönemsel Hasar Verisi</text>
+  <text x="553" y="175" font-size="9" fill="#6b6560">Tamlık kategorisine göre tüm ödemeler çekilir</text>
+  <rect x="718" y="152" width="72" height="14" rx="4" fill="#4a7c59"/>
+  <text x="754" y="162" text-anchor="middle" font-size="7.5" font-weight="700" fill="#fff">SBM + Sistem</text>
+  <text x="553" y="196" font-size="8" fill="#9e9790" font-style="italic">Kaynak: SBM ve mevcut sistem DB eş zamanlı sorgulanır</text>
+
+  <line x1="675" y1="206" x2="675" y2="224" stroke="#b5472a" stroke-width="1.8" marker-end="url(#arrow-red)"/>
+
+  <!-- Step 2 -->
+  <rect x="508" y="224" width="334" height="66" rx="8" fill="#fdf5f3" stroke="#e8c4ba" stroke-width="1"/>
+  <circle cx="532" cy="257" r="13" fill="#b5472a"/>
+  <text x="532" y="262" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">2</text>
+  <text x="553" y="245" font-size="10" font-weight="600" fill="#1c1a18">SBM Gönderim Dosyaları</text>
+  <text x="553" y="259" font-size="9" fill="#6b6560">O aya ait gönderilen tüm dosyalar alınır</text>
+  <rect x="718" y="236" width="72" height="14" rx="4" fill="#4a7c59"/>
+  <text x="754" y="246" text-anchor="middle" font-size="7.5" font-weight="700" fill="#fff">SBM + Sistem</text>
+  <text x="553" y="280" font-size="8" fill="#9e9790" font-style="italic">Kaynak: Her iki DB'den çapraz veri çekilir</text>
+
+  <line x1="675" y1="290" x2="675" y2="308" stroke="#b5472a" stroke-width="1.8" marker-end="url(#arrow-red)"/>
+
+  <!-- Step 3 -->
+  <rect x="508" y="308" width="334" height="54" rx="8" fill="#fdf5f3" stroke="#e8c4ba" stroke-width="1"/>
+  <circle cx="532" cy="335" r="13" fill="#b5472a"/>
+  <text x="532" y="340" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">3</text>
+  <text x="553" y="329" font-size="10" font-weight="600" fill="#1c1a18">Fark Analizi</text>
+  <text x="553" y="344" font-size="9" fill="#6b6560">Kümülatif ve alt dosya kırılımlarına göre farklar çıkarılır</text>
+
+  <line x1="675" y1="362" x2="675" y2="380" stroke="#b5472a" stroke-width="1.8" marker-end="url(#arrow-red)"/>
+
+  <!-- Decision -->
+  <polygon points="675,380 822,434 675,488 528,434" fill="#fdf0ed" stroke="#e8c4ba" stroke-width="1.2"/>
+  <text x="675" y="428" text-anchor="middle" font-size="9" font-weight="600" fill="#1c1a18">Hata kaynağı</text>
+  <text x="675" y="442" text-anchor="middle" font-size="9" font-weight="600" fill="#1c1a18">nerede?</text>
+
+  <line x1="822" y1="434" x2="844" y2="434" stroke="#b5472a" stroke-width="1.5"/>
+  <line x1="844" y1="434" x2="844" y2="506" stroke="#b5472a" stroke-width="1.5"/>
+  <line x1="844" y1="506" x2="824" y2="506" stroke="#b5472a" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+  <text x="848" y="474" font-size="8" fill="#b5472a">Dış birim</text>
+
+  <line x1="675" y1="488" x2="675" y2="506" stroke="#b5472a" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+  <text x="682" y="500" font-size="8" fill="#4a7c59">Sistem</text>
+
+  <!-- 5a -->
+  <rect x="662" y="506" width="160" height="50" rx="8" fill="#fce8e3" stroke="#b5472a" stroke-width="1"/>
+  <text x="742" y="525" text-anchor="middle" font-size="9" font-weight="600" fill="#1c1a18">Birime Bildir</text>
+  <text x="742" y="539" text-anchor="middle" font-size="8" fill="#6b6560">Muhasebe / ilgili birim</text>
+  <text x="742" y="551" text-anchor="middle" font-size="8" fill="#6b6560">düzeltme yapar</text>
+
+  <!-- 5b -->
+  <rect x="508" y="506" width="150" height="50" rx="8" fill="#eaf3ee" stroke="#4a7c59" stroke-width="1"/>
+  <text x="583" y="525" text-anchor="middle" font-size="9" font-weight="600" fill="#1c1a18">Önceliklendir</text>
+  <text x="583" y="539" text-anchor="middle" font-size="8" fill="#6b6560">Ad hoc harici hatalar</text>
+  <text x="583" y="551" text-anchor="middle" font-size="8" fill="#6b6560">geliştirme kuyruğuna</text>
+
+  <line x1="583" y1="556" x2="583" y2="578" stroke="#4a7c59" stroke-width="1.5"/>
+  <line x1="742" y1="556" x2="742" y2="578" stroke="#b5472a" stroke-width="1.5"/>
+  <line x1="583" y1="578" x2="742" y2="578" stroke="#9e9790" stroke-width="1.5"/>
+  <line x1="675" y1="578" x2="675" y2="596" stroke="#9e9790" stroke-width="1.8" marker-end="url(#arrow-gray)"/>
+
+  <rect x="600" y="596" width="150" height="36" rx="18" fill="#b5472a"/>
+  <text x="675" y="619" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Süreç Tamamlandı</text>
+
+  <rect x="508" y="648" width="334" height="46" rx="8" fill="#eaf3ee" stroke="#4a7c59" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="675" y="666" text-anchor="middle" font-size="9" fill="#4a7c59" font-weight="600">✓ Proaktif — Çapraz veri kaynağı</text>
+  <text x="675" y="680" text-anchor="middle" font-size="8.5" fill="#6b6560">SBM + Sistem DB eş zamanlı sorgu, sistematik fark analizi</text>
+
+</svg>

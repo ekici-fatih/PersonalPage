@@ -30,7 +30,7 @@ const slidesMeta = [
     skills: ['Microservice', 'Mobil Sistemler', 'REST API', 'Oracle', 'Java', 'Agile', 'Sistem Analizi', 'Hasar Yönetimi'],
     cards: [
       { id: 'az-1', num: '01', title: 'Mobil 3D Tahsilat entegrasyonu', desc: 'Mevcut sistemlerin yeni ürün yapılarına uyarlanması ve geçiş süreçlerinin yönetimi' },
-      { id: 'ts-sbm', num:'02',     icon: '🔗', title: 'Sigorta üretim',           desc: 'Sektör veri standardizasyonu ve SBM entegrasyonu' },
+      { id: 'ts-sbm', num:'02',     icon: '🔗', title: 'SBM Veri Entegrasyonu & Mutabakat Sistemi',           desc: 'Sektör veri standardizasyonu ve SBM entegrasyonu' },
       { id: 'ts-chatbot', num:'03', icon: '🤖', title: 'Chatbot & AI Asistan',            desc: 'Müşteri hizmetleri için yapay zeka tabanlı chatbot geliştirme' },
       { id: 'ts-btrans',  num:'04',  icon: '🔄', title: 'BTrans Veri Paylaşımı Modernizasyonu',     desc: 'Veri aktarım uygulamasının modernizasyonu ve online sisteme geçişi' },
       { id: 'ts-bpmn',    num:'05',    icon: '📋', title: 'BPMN Süreç Modelleme',            desc: 'İş süreçlerinin BPMN ile modellenmesi' },
@@ -173,38 +173,91 @@ Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.`
   },
   'ts-sbm': {
     tag: '',
-    title: 'SBM Ortak Veri Modeli',
-    stack: ['PL/SQL', 'Oracle', 'Java', 'ETL', 'Shell Script', 'Veri Kalitesi'],
+    title: 'SBM Veri Entegrasyonu & Mutabakat Sistemi',
+    stack: ['PL/SQL', 'Oracle', 'Java', 'ETL', 'Shell Script', 'Veri Kalitesi', 'Python', 'Selenium'],
     sections: [
-      { type: 'text', content: 'SBM ortak veri modeli kapsamında mevcut job yapılarını güncelledim, yeni job ve servisler oluşturdum. Bozuk veri analizi için ad-hoc otomasyon scriptleri yazdım. En büyük katkım olarak gördüğüm mutabakat yönetim ekranını geliştirdim.' },
-      { type: 'svg', content: `<svg viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans,sans-serif">
-      <rect x="15" y="58" width="112" height="80" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="71" y="90" text-anchor="middle" fill="#6b6560" font-size="10">Kaynak</text>
-      <text x="71" y="106" text-anchor="middle" fill="#b5472a" font-size="10">Sistemler</text>
-      <line x1="127" y1="98" x2="178" y2="98" stroke="#b5472a44" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <polygon points="178,93 190,98 178,103" fill="#b5472a44"/>
-      <rect x="190" y="42" width="154" height="112" rx="4" fill="#e8e0d4" stroke="#b5472a66" stroke-width="1.5"/>
-      <text x="267" y="68" text-anchor="middle" fill="#6b6560" font-size="10">ETL / Job Katmanı</text>
-      <line x1="205" y1="78" x2="329" y2="78" stroke="#b5472a15" stroke-width="1"/>
-      <text x="267" y="96" text-anchor="middle" fill="#8b3520" font-size="10">Job Güncelleme</text>
-      <text x="267" y="112" text-anchor="middle" fill="#6b6560" font-size="9">Yeni Job & Servisler</text>
-      <text x="267" y="127" text-anchor="middle" fill="#6b6560" font-size="9">Veri Düzeltme Script</text>
-      <text x="267" y="142" text-anchor="middle" fill="#6b6560" font-size="9">Otomasyon</text>
-      <line x1="344" y1="88" x2="394" y2="68" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <line x1="344" y1="112" x2="394" y2="136" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <rect x="394" y="48" width="122" height="44" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="455" y="68" text-anchor="middle" fill="#6b6560" font-size="10">SBM</text>
-      <text x="455" y="84" text-anchor="middle" fill="#b5472a" font-size="10">Ortak Model</text>
-      <rect x="394" y="116" width="122" height="44" rx="4" fill="#e8e0d4" stroke="#b5472a77" stroke-width="1.5"/>
-      <text x="455" y="136" text-anchor="middle" fill="#8b3520" font-size="10">Mutabakat</text>
-      <text x="455" y="152" text-anchor="middle" fill="#6b6560" font-size="9">Yönetim Ekranı ★</text>
-      <line x1="516" y1="70" x2="566" y2="88" stroke="#b5472a22" stroke-width="1"/>
-      <line x1="516" y1="138" x2="566" y2="110" stroke="#b5472a22" stroke-width="1"/>
-      <rect x="566" y="72" width="62" height="50" rx="4" fill="#f0ebe3" stroke="#b5472a15" stroke-width="1"/>
-      <text x="597" y="95" text-anchor="middle" fill="#6b6560" font-size="9">Raporlama</text>
-      <text x="597" y="110" text-anchor="middle" fill="#6b6560" font-size="9">& İzleme</text>
-    </svg>` },
-      { type: 'bottomText', content: '★ Mutabakat yönetim ekranı; veri uyumsuzluklarının anlık görüntülenmesini, elle müdahale ve onay akışlarını tek bir arayüzde birleştirdi.' },
+      { 
+        type: 'text', 
+        content: `Sigorta Bilgi ve Gözetim Merkezi (SBM), Türkiye'nin sigorta ekosistemindeki verileri merkezi bir yapıda konsolide eden teknolojik bir veri ambarıdır. Ortak veri modeli projesi kapsamında tüm sigorta kurumlarının aynı standarda sahip şekilde verilerini SBM'ye iletmesi sağlanmaktadır.` 
+      },
+      { type: 'image', content: 'images/sbm_yapi.png' },
+      { 
+        type: 'text', 
+        content: `<div style="margin: 24px 0;">
+          <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Görevlerim & Sorumluluklar</h4>
+          <div style="color: #6b6560; line-height: 1.7; margin-bottom: 18px;">
+            İşe girdiğim dönemden çıktığım döneme kadar (başka projelere full odaklandığım dönemler dışında) bu projenin parçası oldum. Projeyi başlangıçta veri bakımı ve aktarım çalışmalarından başlayarak, sonrasında sistem geliştirmelerine ve ödeme mutabakat sisteminin kurulumuna kadar yönettiğim projeyi 3 ana ayakta organiye edebilirim:
+          </div>
+          
+          <h5 style="font-size: 13px; font-weight: 600; color: #1c1a18; margin-bottom: 10px; margin-top: 14px;">1. Sistem Verilerinin Düzeltilmesi</h5>
+          <p style="color: #6b6560; line-height: 1.65; margin-bottom: 10px; margin-left: 10px;">Migration hataları, yanlış mapping, kullanıcı input hataları ve iş kuralı ihlalleri nedeniyle oluşan veri hatalarının düzeltilmesi. Sistemsel eksikliklerin tespitinde analiz ve test çalışmalarını yürütme. Toplu veri bakımı gerektiğinde SQL ve Python scriptleri yazarak otomasyonu sağlama.</p>
+          
+          <h5 style="font-size: 13px; font-weight: 600; color: #1c1a18; margin-bottom: 10px; margin-top: 14px;">2. Yeni Sistem Geliştirmeleri</h5>
+          <p style="color: #6b6560; line-height: 1.65; margin-bottom: 10px; margin-left: 10px;">SBM'ye ait 7-8 farklı servis ailesinin hasar ayağındaki geliştirmelerini yürütme. Kimlik sorgulama gibi hizmetlerdeki değişiklikleri tüm bağımlı modüllerde güncelleyerek tutarlılığı sağlama. Veri aktarım standartlarına aykırı sistem prosedürlerinin güncellenmesini sağlama.</p>
+          
+          <h5 style="font-size: 13px; font-weight: 600; color: #1c1a18; margin-bottom: 10px; margin-top: 14px;">3. Mutabakat Sistemini İyileştirme</h5>
+          <p style="color: #6b6560; line-height: 1.65; margin-left: 10px;">Yapılmış fakat yetersiz kalan mutabakat sistemini ödeme özelinde netleştirerek yeniden tasarlama. Her transaction'ı eşleştirmeye çalışmak yerine, geniş resmi görüp veri uyumsuzluklarını anlık olarak tanımlayan bir sistem kurma.</p>
+        </div>`
+      },
+      { 
+        type: 'svg', 
+        content: 'diagrams/sbm-surec-karsilastirma.svg' 
+      },
+      {
+        type: 'text',
+        content: `<div style="margin: 24px 0;">
+          <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Temel Katkılarım</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+              Tek satırlıktan 200.000 satıra uzanan kapsamda veri bakım ve temizleme çalışmaları
+            </li>
+            <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+              Ödeme mutabakat sisteminin kurulumu ve proje ilerlemesinde teknik yönlendirme
+            </li>
+            <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+              SBM süreçleri konusunda diğer birimlere teknik ve koordinasyon desteği
+            </li>
+            <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+              SBM geliştirmelerinde tam hakimiyet ve end-to-end süreç yönetimi
+            </li>
+          </ul>
+        </div>`
+      },
+      { 
+        type: 'bottomText', 
+        content: `<div style="margin-bottom: 24px;">
+          <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Zorluklar</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
+              Veri kirliliği ve sistem tasarımından kaynaklanan entegrasyon güçlükleri
+            </li>
+            <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
+              Proje sigorta domain uzmanlığı, veri yönetimi ve yazılım/debugging bilgisinin bir arada talep edildiği geniş bir kapsama sahip
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Çıkarılan Dersler</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+              <span style="font-weight: 600; color: #1c1a18;">Veri Validation:</span> Kritik sistemlerde küçük bir veri hatası zincirleme etki yaratabilir — dikkat, doğrulama ve audit adımları vazgeçilmezdir
+            </li>
+            <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+              <span style="font-weight: 600; color: #1c1a18;">Multidisciplinary Skills:</span> Veri, domain ve teknik bilginin bir arada bulunması karmaşık problemlere esnek ve bütünsel çözümler üretmeyi mümkün kılar
+            </li>
+
+          </ul>
+        </div>` 
+      },
       { type: 'image', content: 'images/ts-sbm.png' }
     ]
   },
