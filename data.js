@@ -264,35 +264,81 @@ Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.`
   'ts-chatbot': {
     tag: '',
     title: 'Chatbot Servis Entegrasyonları',
-    stack: ['REST API', 'Java', 'NLP Entegrasyon', 'Chatbot', 'Servis Tasarımı'],
+    stack: ['REST API', 'Java', 'NLP Entegrasyon', 'Chatbot', 'Servis Tasarımı', 'POC', 'Login Akışı'],
     sections: [
-      { type: 'text', content: '50 farklı chatbot senaryosunun backend servis entegrasyonlarını oluşturdum. Zarar gören araç hasar sorgulama akışını ve ödeme cevap yapısını baştan kurguladım; mevcut servis kontratlarını chatbot iletişim modeline uygun hale getirdim.' },
-      { type: 'svg', content: `<svg viewBox="0 0 640 180" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans,sans-serif">
-      <rect x="15" y="62" width="100" height="60" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="65" y="89" text-anchor="middle" fill="#6b6560" font-size="10">Kullanıcı</text>
-      <text x="65" y="105" text-anchor="middle" fill="#b5472a" font-size="10">Mesajı</text>
-      <line x1="115" y1="92" x2="162" y2="92" stroke="#b5472a44" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <polygon points="162,87 174,92 162,97" fill="#b5472a44"/>
-      <rect x="174" y="52" width="138" height="80" rx="4" fill="#e8e0d4" stroke="#b5472a66" stroke-width="1.5"/>
-      <text x="243" y="78" text-anchor="middle" fill="#6b6560" font-size="10">NLP / Intent</text>
-      <line x1="188" y1="88" x2="298" y2="88" stroke="#b5472a15" stroke-width="1"/>
-      <text x="243" y="104" text-anchor="middle" fill="#8b3520" font-size="11">50 Senaryo</text>
-      <text x="243" y="120" text-anchor="middle" fill="#6b6560" font-size="9">Sınıflandırma</text>
-      <line x1="312" y1="78" x2="360" y2="55" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <line x1="312" y1="92" x2="360" y2="92" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <line x1="312" y1="108" x2="360" y2="132" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <rect x="360" y="37" width="120" height="34" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="420" y="58" text-anchor="middle" fill="#b5472a" font-size="10">Hasar Sorgulama</text>
-      <rect x="360" y="75" width="120" height="34" rx="4" fill="#e8e0d4" stroke="#b5472a77" stroke-width="1.5"/>
-      <text x="420" y="96" text-anchor="middle" fill="#8b3520" font-size="10">Ödeme Cevabı ★</text>
-      <rect x="360" y="115" width="120" height="34" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="420" y="136" text-anchor="middle" fill="#b5472a" font-size="10">Poliçe Bilgisi</text>
-      <line x1="480" y1="92" x2="535" y2="92" stroke="#b5472a33" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <rect x="535" y="68" width="90" height="50" rx="4" fill="#f0ebe3" stroke="#b5472a22" stroke-width="1"/>
-      <text x="580" y="91" text-anchor="middle" fill="#6b6560" font-size="9">Yanıt</text>
-      <text x="580" y="106" text-anchor="middle" fill="#6b6560" font-size="9">Üretimi</text>
-    </svg>` },
-      { type: 'bottomText', content: '★ Ödeme cevap yapısı; farklı ödeme durumları için anlaşılır, hata toleranslı ve kullanıcı dostu bir yanıt şeması olarak yeniden tasarlandı.' },
+      { 
+        type: 'text', 
+        content: `Şirketin AI dönüşüm sürecinin bir parçası olarak sigorta sektöründe fark yaratacak bir müşteri chatbotu geliştirme projesidir.
+         Müşteriler poliçe, hasar ve provizyon süreçlerine dair sorularını chatbot üzerinden iletebilmesi hedeflenmiştir. 
+         Sistemin kalbinde müşteri niyetini analiz edip en doğru cevap kaynağını seçen bir AI modülü yer alıyor:  Bu kaynaklar eğitilmiş knowledge base, intent bazlı cevap kalıpları ve servis entegrasyonlarıdır.` 
+      },
+      { type: 'svg', content: 'diagrams/chatbot_design.svg' },
+      { 
+        type: 'text', 
+        content: `<div style="margin: 24px 0;">
+          <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Benim Rolüm & Sorumluluklar</h4>
+          <p style="color: #6b6560; line-height: 1.7; margin-bottom: 14px;">Elementer sigorta (hayat ve BES dışı) alanındaki hasar, provizyon ve poliçe servislerini chatbot altyapısına entegre etmek ve tüm servis flow'larını tasarlamak.</p>
+          
+          <h5 style="font-size: 13px; font-weight: 600; color: #1c1a18; margin-bottom: 10px; margin-top: 12px;">Temel Katkılarım:</h5>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 10px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+              <strong>50 Senaryo Analizi:</strong> 50 farklı kullanıcı senaryosunun analiz ederek backend servis entegrasyonu teknik dökümantasyonunu oluşturdum
+            </li>
+            <li style="margin-bottom: 10px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+              <strong>Zaraf Gören Path (★):</strong> Mevcut sigortalı altyapısı dışında, trafik hasarlarında zaraf gören tarafın da bilgiye erişebilmesi için yeni servis altyapısını  veritabanı üzerinden POC çalışmaları yaparak sıfırdan tasarladım.
+            </li>
+            <li style="margin-bottom: 10px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+              <strong>Cross-Functional Involvement:</strong> Login akışı test süreçlerine aktif katılım, conversation design ortamında doğrudan test ve debugging yaparak chatbotun sadece teknik değil, kullanıcı deneyimi açısından da sağlam bir şekilde geliştirilmesine katkı sağladım.
+            </li>
+            <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">→</span>
+              <strong>Production Deployment:</strong> Canlı ortam  deployment çalışmalarına destek (servisli & servissiz senaryolar)
+            </li>
+          </ul>
+        </div>`
+      },
+      
+      { 
+        type: 'bottomText', 
+        content: `<div style="margin-bottom: 24px;">
+          <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Zorluklar</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
+              Test ortamı veritabanı sorunları test süreçlerini zaman zaman sekteye uğrattı
+            </li>
+            <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
+              AI sistemlerin doğası — bir yerde yapılan düzeltme başka bir alanı etkileyebilmesi nedeniyle her değişiklik sonrası tüm test setinin baştan koşulması gerekiyordu
+            </li>
+            <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">•</span>
+              Sıkı deadline ve birden fazla ekiple eş zamanlı çalışma ortamında hesap verebilirlik kritik bir öneme sahipti
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 14px; font-weight: 600; color: #1c1a18; margin-bottom: 14px;">Kazanımlar</h4>
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+              <span style="font-weight: 600; color: #1c1a18;">Holistic Experience:</span> Chatbot geliştirmesini sadece analiz katmanında değil, servis tasarımı, test ve canlıya alma aşamalarında da bütünüyle deneyimleme
+            </li>
+            <li style="margin-bottom: 12px; color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+              <span style="font-weight: 600; color: #1c1a18;">Domain Expertise & POC:</span> Sigorta domeninde API tasarımı ve POC metodolojisi konusunda derinlemesine deneyim
+            </li>
+            <li style="color: #6b6560; line-height: 1.65; padding-left: 20px; position: relative;">
+              <span style="position: absolute; left: 0; color: #b5472a; font-weight: 600;">✓</span>
+              <span style="font-weight: 600; color: #1c1a18;">Stakeholder Management:</span> Farklı ekiplerle hızlı koordinasyon ve çok paydaşlı projelerde sorumluluk yönetimi konularında olgunluk
+            </li>
+          </ul>
+        </div>` 
+      },
       { type: 'image', content: 'images/ts-chatbot.png' }
     ]
   },
