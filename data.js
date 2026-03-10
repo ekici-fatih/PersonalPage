@@ -333,37 +333,20 @@ Aşağıdaki diyagramda sistemin high-level mimarisi görülmektedir.`
     ]
   },
   'interest-agile': {
-    tag: 'İlgi Alanı',
-    title: 'Agile Geliştirme',
-    stack: ['Scrum', 'Sprint', 'Retrospektif', 'Jira', 'Cevik Dönüsüm'],
-    sections: [
-      { type: 'text', content: 'Sprint bazlı çalışma disiplinini hem Türkiye Sigorta hasar ekibinde hem de kişisel projelerimde uyguladım. Retrospektif kültürünün ekip verimliliğine etkisini bizzat gözlemledim.' },
-      { type: 'svg', content: `<svg viewBox="0 0 640 160" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans,sans-serif">
-      <rect x="20" y="40" width="100" height="80" rx="4" fill="#e8e0d4" stroke="#b5472a66" stroke-width="1.5"/>
-      <text x="70" y="76" text-anchor="middle" fill="#6b6560" font-size="10">Backlog</text>
-      <text x="70" y="92" text-anchor="middle" fill="#8b3520" font-size="10">Items</text>
-      <line x1="120" y1="80" x2="160" y2="80" stroke="#b5472a44" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <polygon points="160,75 172,80 160,85" fill="#b5472a44"/>
-      <rect x="172" y="28" width="110" height="104" rx="4" fill="#e8e0d4" stroke="#b5472a77" stroke-width="1.5"/>
-      <text x="227" y="58" text-anchor="middle" fill="#6b6560" font-size="10">Sprint</text>
-      <line x1="185" y1="68" x2="269" y2="68" stroke="#b5472a15" stroke-width="1"/>
-      <text x="227" y="85" text-anchor="middle" fill="#8b3520" font-size="11">2 Hafta</text>
-      <text x="227" y="101" text-anchor="middle" fill="#6b6560" font-size="9">Plan · Dev · Test</text>
-      <text x="227" y="116" text-anchor="middle" fill="#6b6560" font-size="9">Retro · Review</text>
-      <line x1="282" y1="80" x2="322" y2="80" stroke="#b5472a44" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <polygon points="322,75 334,80 322,85" fill="#b5472a44"/>
-      <rect x="334" y="40" width="100" height="80" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="384" y="76" text-anchor="middle" fill="#6b6560" font-size="10">Done</text>
-      <text x="384" y="92" text-anchor="middle" fill="#2a7a56" font-size="10">Teslim</text>
-      <line x1="434" y1="80" x2="474" y2="80" stroke="#b5472a22" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <rect x="474" y="40" width="120" height="80" rx="4" fill="#f0ebe3" stroke="#b5472a33" stroke-width="1.5"/>
-      <text x="534" y="73" text-anchor="middle" fill="#6b6560" font-size="10">Retrospektif</text>
-      <text x="534" y="89" text-anchor="middle" fill="#b5472a" font-size="10">Iyilestirme</text>
-      <text x="534" y="105" text-anchor="middle" fill="#6b6560" font-size="9">Dongusu</text>
-    </svg>` },
-      { type: 'bottomText', content: 'Sprint bazlı geliştirme, günlük stand-up kültürü ve sürekli iyileştirme döngüsü — hem teknik hem insani boyutuyla ilgi çekici bir alan.' }
-    ]
-  },
+  tag: 'Ilgi Alani',
+  title: 'Agile Metrikleri Nasıl Kullanılmalı?',
+  stack: ['Agile', 'Scrum', 'Metrik', 'Goodhart Yasası', 'Ekip Kültürü'],
+  sections: [
+    { type: 'text', content: 'Agile ve agile çalışma metodolojileri 20-25 yılı aşkın süredir endüstriyi şekillendirmektedir. Her yıl pek çok şirket agile dönüşümler yaparak şirket üretkenliklerini artırmayı hedeflemektedir. Ayrıca bu kazanılan üretkenliğin ölçümü de gelecek projeksiyonlarına ışık tutacaktır.' },
+    { type: 'text', content: 'Agile ekiplerin kullandığı başlıca metrikler şunlardır: Velocity, Sprint Burndown, Release Burnup, Cycle Time, Lead Time, Defect Rate / Escaped Defects, Code Coverage, Team Happiness / Morale, Cumulative Flow Diagram ve Deployment Frequency. Her biri, takımın farklı bir boyutuna dair veri üretir; sprint kapasitesinden kaliteye, akış hızından ekip sürdürülebilirliğine kadar geniş bir yelpazeyi kapsar.' },
+    { type: 'text', content: 'Bu makale bu metriklerin nasıl yorumlanması gerektiğinden ziyade nasıl yorumlanmaması gerektiğine yoğunlaşacaktır.' },
+    { type: 'text', content: 'Standart KPI takibinden farklı olarak agile metrikler tek başlarına bir anlam taşımazlar. İstatistikte korelasyon ile nedensellik arasındaki ilişki sık sık karıştırılır; yüksek korelasyon, yüksek nedensellik anlamına gelmez. Eğer bir metrik iyi ya da kötü bir trend taşıyorsa, bu trendin altında yatan neden açıklanmadan takım performansı hakkında yorum yapmak doğru değildir.' },
+    { type: 'text', content: 'Takım performansı üzerine acele yorum yapmak, Goodhart Yasası göz önüne alındığında ayrıca ciddi bir risk barındırır. İngiliz ekonomist Charles Goodhart\'ın ortaya koyduğu bu ilke özetle şunu söyler: "Bir ölçüm hedef haline geldiğinde, iyi bir ölçüm olmaktan çıkar." Başka bir deyişle, bir metrik performans yargılamasının aracına dönüştüğünde ekipler çıktıya değil metriğe oynamaya başlar. Velocity şişer, hatalar kayıt dışı kalır, testler anlamsızlaşır. Bu, hiç kimsenin kasıtlı olarak tercih ettiği bir sonuç değildir — ama yanlış kurgulanmış bir ölçüm sisteminin kaçınılmaz çıktısıdır.' },
+    { type: 'text', content: 'Her metrik belirli bir konu hakkında sinyal vermektedir. Sinyallerin görevi, takımın bir konuda ileri ya da geriye doğru yol aldığını göstermek ve bunun araştırılmasına zemin hazırlamaktır. Bu araştırmanın içini doldurmak ise tamamen kuruma ve ekibe özgüdür. Aynı metrik, iki farklı şirkette iki farklı anlam taşıyabilir. Velocity\'nin düştüğü bir sprint, bir ekip için teknik borcun biriktiğinin işareti olabilirken; bir diğeri için ekibin daha gerçekçi tahminler yapmaya başladığının göstergesidir. Sinyali doğru okumak, o sinyalin hangin zeminde yükseldiğini bilmeyi gerektirir.' },
+    { type: 'text', content: 'Bu nedenle agile metrik setinin ve eşik değerlerinin kurumun kendi olgunluk seviyesine, kültürüne ve stratejik önceliklerine göre tasarlanması gerekir. Evrensel bir metrik panosu yoktur — olmamalıdır da. Hangi sinyallerin önemli olduğunu, bu sinyallerin ne anlama geldiğini ve ne zaman harekete geçilmesi gerektiğini tanımlamak, her kurumun kendi yapması gereken tasarım çalışmasıdır.' },
+    { type: 'bottomText', content: 'Sonuç olarak agile metrikler bir karne değil, bir pusulasıdır. Pusulanın görevi nereye gidileceğini söylemek değil, nerede durulduğunu göstermektir. Nereye gidileceğine ise insan karar verir — veriyi anlayan, bağlamı bilen, kültürü taşıyan insan.' }
+  ]
+},
   'interest-llm': {
     tag: 'Ilgi Alani',
     title: 'AI · Local LLM',
